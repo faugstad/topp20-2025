@@ -2162,13 +2162,13 @@
 				const prevBtn = document.getElementById('prevBtn');
 				const nextBtn = document.getElementById('nextBtn');
 
-				// Home icon on first slide, otherwise chevron-left
-				prevBtn.innerHTML = currentIndex === 0
+				// Home icon on course slide 1 (rank 20), otherwise chevron-left
+				prevBtn.innerHTML = currentIndex === 1
 					? '<i data-lucide="home"></i>'
 					: '<i data-lucide="chevron-left"></i>';
 
-				// Award icon on last slide, otherwise chevron-right
-				nextBtn.innerHTML = currentIndex === totalSlides - 1
+				// Award icon on slide 20 (rank 1) and last slide (outro), otherwise chevron-right
+				nextBtn.innerHTML = (currentIndex === 20 || currentIndex === totalSlides - 1)
 					? '<i data-lucide="award"></i>'
 					: '<i data-lucide="chevron-right"></i>';
 
