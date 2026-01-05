@@ -113,7 +113,12 @@
 				flex-direction: column;
 				max-width: 500px;
 				margin: 0 auto;
-				background: linear-gradient(180deg, #0a0a2e 0%, #1a1a4e 50%, #0f0f3d 100%);
+				background: linear-gradient(
+					180deg,
+					#0a0a2e 0%,
+					#1a1a4e 50%,
+					#0f0f3d 100%
+				);
 				position: relative;
 			}
 
@@ -1125,15 +1130,19 @@
 			}
 
 			@keyframes bounce {
-				0%, 100% { transform: translateY(0); }
-				50% { transform: translateY(-8px); }
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-8px);
+				}
 			}
 
 			.outro-title {
 				font-family: 'Press Start 2P', cursive;
 				font-size: 16px;
-				color: #39ff14;
-				text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+				color: var(--gray-900);
 				margin-bottom: 8px;
 				line-height: 1.4;
 			}
@@ -1192,14 +1201,14 @@
 			}
 
 			.outro-cta {
-				background: linear-gradient(180deg, #39ff14 0%, #2ecc0f 100%);
+				background: linear-gradient(180deg, #ffe566 0%, #e6c200 100%);
 				color: #000;
 				font-weight: 600;
-				box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+				box-shadow: 0 4px 15px rgba(255, 229, 102, 0.4);
 			}
 
 			.outro-cta:hover {
-				box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+				box-shadow: 0 4px 20px rgba(255, 229, 102, 0.6);
 			}
 
 			/* Winner styling */
@@ -2148,6 +2157,23 @@
 				document.getElementById('prevBtn').disabled = currentIndex === 0;
 				document.getElementById('nextBtn').disabled =
 					currentIndex === totalSlides - 1;
+
+				// Update navigation icons based on current position
+				const prevBtn = document.getElementById('prevBtn');
+				const nextBtn = document.getElementById('nextBtn');
+
+				// Home icon on first slide, otherwise chevron-left
+				prevBtn.innerHTML = currentIndex === 0
+					? '<i data-lucide="home"></i>'
+					: '<i data-lucide="chevron-left"></i>';
+
+				// Award icon on last slide, otherwise chevron-right
+				nextBtn.innerHTML = currentIndex === totalSlides - 1
+					? '<i data-lucide="award"></i>'
+					: '<i data-lucide="chevron-right"></i>';
+
+				// Re-render Lucide icons
+				lucide.createIcons();
 			}
 
 			function showMilestone(text, container) {
@@ -2292,7 +2318,12 @@
 
 			// Keyboard - add up/down arrows and Enter
 			document.addEventListener('keydown', (e) => {
-				if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === ' ' || e.key === 'Enter') {
+				if (
+					e.key === 'ArrowRight' ||
+					e.key === 'ArrowUp' ||
+					e.key === ' ' ||
+					e.key === 'Enter'
+				) {
 					// Use startCountdown on intro screen to enable sound
 					if (currentIndex === 0 && (e.key === ' ' || e.key === 'Enter')) {
 						startCountdown();
@@ -2673,14 +2704,17 @@
 			// Fetch visitor count from CountAPI
 			async function initVisitorCounter() {
 				try {
-					const response = await fetch('https://api.countapi.xyz/hit/utdannet-topp20/visits');
+					const response = await fetch(
+						'https://api.countapi.xyz/hit/utdannet-topp20/visits'
+					);
 					const data = await response.json();
 					if (data.value) {
 						updateVisitorCounter(data.value);
 					}
 				} catch (error) {
 					// Fallback: use localStorage for offline/error cases
-					let localCount = parseInt(localStorage.getItem('visitorCount') || '0') + 1;
+					let localCount =
+						parseInt(localStorage.getItem('visitorCount') || '0') + 1;
 					localStorage.setItem('visitorCount', localCount);
 					updateVisitorCounter(localCount);
 				}
