@@ -248,6 +248,56 @@
 				display: none;
 			}
 
+			.header-cta {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 6px;
+				height: 40px;
+				padding: 0 14px;
+				border-radius: 20px;
+				border: none;
+				background: rgba(255, 255, 255, 0.15);
+				color: var(--white);
+				font-size: 12px;
+				font-weight: 600;
+				cursor: pointer;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			.header-cta:hover {
+				background: rgba(255, 255, 255, 0.25);
+			}
+
+			.header-cta svg {
+				width: 14px;
+				height: 14px;
+			}
+
+			.header-share {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border: none;
+				background: rgba(255, 255, 255, 0.15);
+				color: var(--white);
+				cursor: pointer;
+				transition: all 0.2s ease;
+			}
+
+			.header-share:hover {
+				background: rgba(255, 255, 255, 0.25);
+			}
+
+			.header-share svg {
+				width: 18px;
+				height: 18px;
+			}
+
 			/* Floating sound toggle for intro */
 			.sound-toggle-float {
 				display: flex;
@@ -481,7 +531,11 @@
 			.course-image-wrapper {
 				position: relative;
 				aspect-ratio: 16 / 9;
-				overflow: hidden;
+				overflow: visible;
+			}
+
+			.course-image-wrapper .course-image {
+				border-radius: 12px 12px 0 0;
 			}
 
 			.course-image {
@@ -506,30 +560,27 @@
 
 			.instructor-overlay {
 				position: absolute;
-				bottom: 12px;
+				bottom: -30px;
 				left: 12px;
 				display: flex;
-				align-items: center;
-				gap: 8px;
-				background: rgba(0, 0, 0, 0.7);
-				padding: 6px 12px 6px 6px;
-				border-radius: 20px;
-				backdrop-filter: blur(8px);
-				-webkit-backdrop-filter: blur(8px);
+				align-items: flex-end;
+				gap: 10px;
 			}
 
 			.instructor-overlay .instructor-avatar {
-				width: 28px;
-				height: 28px;
+				width: 60px;
+				height: 60px;
 				border-radius: 50%;
 				object-fit: cover;
-				border: 2px solid rgba(255, 255, 255, 0.3);
+				border: 3px solid var(--white);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 			}
 
 			.instructor-overlay .instructor-name {
 				font-size: 13px;
 				font-weight: 500;
-				color: var(--white);
+				color: var(--gray-600);
+				padding-bottom: 4px;
 			}
 
 			.badge {
@@ -552,7 +603,7 @@
 			}
 
 			.course-info {
-				padding: 12px 14px;
+				padding: 38px 14px 12px 14px;
 			}
 
 			.course-title {
@@ -1427,7 +1478,7 @@
 					font-size: 22px;
 				}
 				.course-info {
-					padding: 10px;
+					padding: 36px 10px 10px 10px;
 				}
 				.course-title {
 					font-size: 15px;
@@ -1567,6 +1618,13 @@
 					<span>Utdannet.no</span>
 				</a>
 				<div class="header-right">
+					<a href="https://utdannet.no/priser" class="header-cta" target="_blank">
+						<i data-lucide="tag"></i>
+						<span>Priser</span>
+					</a>
+					<button class="header-share" onclick="shareContent()" title="Del">
+						<i data-lucide="share-2"></i>
+					</button>
 					<button class="sound-toggle" id="soundToggle" onclick="toggleSound()">
 						<i data-lucide="volume-x" id="soundOff"></i>
 						<i data-lucide="volume-2" id="soundOn" class="hidden"></i>
@@ -2040,9 +2098,7 @@
                                         <img class="instructor-avatar" src="${
 																					course.instructorImage
 																				}" alt="${course.instructor}">
-                                        <span class="instructor-name">${
-																					course.instructor
-																				}</span>
+                                        <span class="instructor-name">${course.instructor}</span>
                                     </div>
                                 </div>
                                 <div class="course-info">
@@ -2381,6 +2437,26 @@
 					bgMusic = new Audio('retro-arcade-game-music.mp3');
 					bgMusic.loop = true;
 					bgMusic.volume = 0.4;
+				}
+			}
+
+			async function shareContent() {
+				const shareData = {
+					title: 'Utdannets topp 20 kurs i 2025',
+					text: 'Sjekk ut de mest populære nettkursene på Utdannet.no!',
+					url: window.location.href
+				};
+
+				try {
+					if (navigator.share) {
+						await navigator.share(shareData);
+					} else {
+						// Fallback: copy to clipboard
+						await navigator.clipboard.writeText(window.location.href);
+						alert('Lenke kopiert til utklippstavlen!');
+					}
+				} catch (err) {
+					console.log('Deling avbrutt eller feilet');
 				}
 			}
 
