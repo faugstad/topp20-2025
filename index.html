@@ -1,1719 +1,2356 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Topp 20 Kurs 2025 | Utdannet.no</title>
-    <meta name="description" content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO – oppdag hvilke kurs nordmenn elsker mest.">
-    <meta name="author" content="Utdannet.no">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://utdannet.github.io/topp20/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://utdannet.github.io/topp20/">
-    <meta property="og:title" content="Topp 20 Kurs 2025 | Utdannet.no">
-    <meta property="og:description" content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO – oppdag hvilke kurs nordmenn elsker mest.">
-    <meta property="og:image" content="https://utdannet.github.io/topp20/retro-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="nb_NO">
-    <meta property="og:site_name" content="Utdannet.no">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://utdannet.github.io/topp20/">
-    <meta name="twitter:title" content="Topp 20 Kurs 2025 | Utdannet.no">
-    <meta name="twitter:description" content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO.">
-    <meta name="twitter:image" content="https://utdannet.github.io/topp20/retro-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle fill='%23ffe566' cx='50' cy='50' r='50'/><text y='.9em' x='50%' text-anchor='middle' font-size='70'>🏆</text></svg>">
-    
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#0a0a1a">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    <style>
-        :root {
-            --yellow: #ffe566;
-            --yellow-dark: #ffdd57;
-            --black: #000000;
-            --white: #ffffff;
-            --bg: #f8f8f8;
-            --card-bg: #f2f2f2;
-            --gray-300: #d4d4d4;
-            --gray-400: #a3a3a3;
-            --gray-500: #737373;
-            --gray-600: #525252;
-            --gray-900: #171717;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html, body {
-            height: 100%;
-            min-height: 100vh;
-            min-height: 100dvh;
-            overflow: hidden;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-            font-weight: 400;
-            background: var(--bg);
-            color: var(--gray-900);
-            touch-action: pan-y;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .app {
-            height: 100%;
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
-            background: var(--white);
-            position: relative;
-        }
-
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 20px;
-            padding-top: calc(12px + env(safe-area-inset-top, 0px));
-            background: var(--white);
-            border-bottom: 1px solid var(--card-bg);
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .header-logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--gray-900);
-        }
-
-        .header-logo:hover span {
-            text-decoration: underline;
-        }
-
-        .header-logo svg {
-            width: 28px;
-            height: 28px;
-        }
-
-        .header-logo span {
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .header-badge {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--card-bg);
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--gray-600);
-        }
-
-        .sound-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            background: var(--card-bg);
-            color: var(--gray-600);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .sound-toggle:hover {
-            background: var(--gray-300);
-        }
-
-        .sound-toggle.active {
-            background: var(--yellow);
-            color: var(--black);
-        }
-
-        .sound-toggle svg {
-            width: 20px;
-            height: 20px;
-            stroke: currentColor;
-        }
-
-        .sound-toggle .hidden {
-            display: none;
-        }
-
-        /* Floating sound toggle for intro */
-        .sound-toggle-float {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            border-radius: 24px;
-            border: 2px solid rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            color: var(--white);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-size: 14px;
-            font-weight: 500;
-            margin-top: 24px;
-        }
-
-        .sound-toggle-float:hover {
-            background: rgba(255,255,255,0.2);
-            border-color: rgba(255,255,255,0.5);
-        }
-
-        .sound-toggle-float.active {
-            background: var(--yellow);
-            border-color: var(--yellow);
-            color: var(--black);
-        }
-
-        .sound-toggle-float svg {
-            width: 20px;
-            height: 20px;
-            stroke: currentColor;
-        }
-
-        .sound-toggle-float .hidden {
-            display: none;
-        }
-
-        .sound-toggle-float .sound-label {
-            white-space: nowrap;
-        }
-
-        @keyframes soundPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.3); }
-            50% { transform: scale(1.02); box-shadow: 0 0 0 8px rgba(255,255,255,0); }
-        }
-
-        .sound-toggle-float:not(.active) {
-            animation: soundPulse 2s ease-in-out infinite;
-        }
-
-        .header-badge svg {
-            width: 14px;
-            height: 14px;
-            stroke: #f59e0b;
-        }
-
-        /* Slides container */
-        .slides-container {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(to bottom, #e8e8e8 0%, #d0d0d0 100%);
-        }
-
-        .slide {
-            position: absolute;
-            left: 12px;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%) translateY(100vh);
-            max-height: calc(100% - 24px);
-            display: flex;
-            flex-direction: column;
-            background: var(--white);
-            padding: 16px 20px 20px 20px;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            border-radius: 20px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
-            opacity: 0;
-            transition: transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1), 
-                        opacity 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
-            z-index: 1;
-        }
-
-        .slide-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .slide-footer {
-            margin-top: 16px;
-        }
-
-        .slide.active {
-            transform: translateY(-50%);
-            opacity: 1;
-            z-index: 10;
-        }
-
-        /* Stacked cards behind the active one */
-        .slide.stacked-1 {
-            transform: translateY(-50%) translateY(14px) scale(0.96);
-            opacity: 1;
-            z-index: 9;
-            pointer-events: none;
-        }
-
-        .slide.stacked-2 {
-            transform: translateY(-50%) translateY(28px) scale(0.92);
-            opacity: 0.85;
-            z-index: 8;
-            pointer-events: none;
-        }
-
-        .slide.stacked-3 {
-            transform: translateY(-50%) translateY(42px) scale(0.88);
-            opacity: 0.7;
-            z-index: 7;
-            pointer-events: none;
-        }
-
-        /* Card being swiped away (going down) */
-        .slide.swiping-down {
-            transform: translateY(-50%) translateY(120vh) scale(0.9) rotate(3deg);
-            opacity: 0;
-            z-index: 20;
-            transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), 
-                        opacity 0.35s ease;
-        }
-
-        /* Cards that have been passed */
-        .slide.passed {
-            transform: translateY(-50%) translateY(100vh);
-            opacity: 0;
-            z-index: 0;
-        }
-
-        /* Rank display - compact */
-        .rank-display {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            padding: 12px 0;
-        }
-
-        .rank-number {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--gray-900);
-            line-height: 1;
-            letter-spacing: -0.5px;
-        }
-
-        .rank-divider {
-            width: 40px;
-            height: 4px;
-            background: var(--yellow);
-            border-radius: 2px;
-        }
-
-        .rank-number.top3 {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .rank-number.top3 ~ .rank-divider,
-        .rank-number.top3 + .rank-divider {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            width: 50px;
-        }
-
-        .rank-number.top1 {
-            font-size: 32px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #f59e0b, #ea580c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .rank-number.top1 ~ .rank-divider,
-        .rank-number.top1 + .rank-divider {
-            background: linear-gradient(135deg, #f59e0b, #ea580c);
-            width: 60px;
-            height: 5px;
-        }
-
-        /* Top 3 divider styling */
-        .slide[data-rank="1"] .rank-divider,
-        .slide[data-rank="2"] .rank-divider,
-        .slide[data-rank="3"] .rank-divider {
-            width: 50px;
-        }
-
-        .slide[data-rank="1"] .rank-divider {
-            background: linear-gradient(135deg, #f59e0b, #ea580c);
-            width: 60px;
-            height: 5px;
-        }
-
-        .slide[data-rank="2"] .rank-divider,
-        .slide[data-rank="3"] .rank-divider {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-        }
-
-        /* Course card */
-        .course-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--gray-300);
-        }
-
-        .course-image-wrapper {
-            position: relative;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-        }
-
-        .course-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            display: flex;
-            gap: 8px;
-        }
-
-        .image-overlay-bottom {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-        }
-
-        .instructor-overlay {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0,0,0,0.7);
-            padding: 6px 12px 6px 6px;
-            border-radius: 20px;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        .instructor-overlay .instructor-avatar {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .instructor-overlay .instructor-name {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--white);
-        }
-
-        .badge {
-            padding: 6px 10px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .badge-free {
-            background: #22c55e;
-            color: white;
-        }
-
-        .badge-duration {
-            background: rgba(0,0,0,0.7);
-            color: white;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-
-        .course-info {
-            padding: 12px 14px;
-        }
-
-        .course-title {
-            font-size: 17px;
-            font-weight: 600;
-            line-height: 1.3;
-            color: var(--gray-900);
-            margin-bottom: 6px;
-        }
-
-        .course-title a {
-            color: inherit;
-            text-decoration: none;
-            transition: text-decoration 0.15s;
-        }
-
-        .course-title a:hover {
-            text-decoration: underline;
-        }
-
-        /* Description */
-        .course-description {
-            font-size: 13px;
-            line-height: 1.45;
-            font-weight: 400;
-            color: var(--gray-500);
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            padding: 14px;
-            background: var(--yellow);
-            color: var(--black);
-            text-decoration: none;
-            text-align: center;
-            font-weight: 500;
-            font-size: 15px;
-            border-radius: 12px;
-            transition: transform 0.15s, opacity 0.15s;
-        }
-
-        .cta-button svg {
-            width: 16px;
-            height: 16px;
-            stroke: var(--black);
-            stroke-width: 2.5;
-        }
-
-        .cta-button:active {
-            transform: scale(0.98);
-            opacity: 0.9;
-        }
-
-        /* Bottom nav */
-        .bottom-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 20px;
-            padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-            background: var(--white);
-            border-top: 1px solid var(--card-bg);
-            gap: 16px;
-        }
-
-        .nav-btn {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.15s;
-            color: var(--black);
-        }
-
-        .nav-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            color: var(--gray-400);
-        }
-
-        .nav-btn:not(:disabled):active {
-            transform: scale(0.95);
-        }
-
-        .nav-btn svg {
-            width: 24px;
-            height: 24px;
-            stroke: currentColor;
-            stroke-width: 2;
-        }
-
-        .progress-wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background: var(--gray-300);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: var(--yellow-dark);
-            border-radius: 4px;
-            transition: width 0.35s ease;
-            width: 0%;
-        }
-
-        .progress-label {
-            text-align: center;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--gray-600);
-        }
-
-        /* Intro slide */
-        .intro-slide {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px !important;
-            background: linear-gradient(180deg, #0a0a2e 0%, #1a1a4e 50%, #0f0f3d 100%) !important;
-            position: absolute;
-            left: 0 !important;
-            right: 0 !important;
-            top: 0 !important;
-            bottom: 0 !important;
-            max-height: none !important;
-            min-height: 100vh;
-            min-height: 100dvh;
-            height: 100vh;
-            height: 100dvh;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            transform: translateY(100vh) !important;
-            overflow: hidden;
-        }
-
-        .intro-slide.active {
-            transform: translateY(0) !important;
-        }
-
-        .intro-slide.passed {
-            transform: translateY(100vh) !important;
-        }
-
-        /* Retro grid floor */
-        .intro-slide::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -50%;
-            right: -50%;
-            height: 45%;
-            background: 
-                linear-gradient(90deg, rgba(255,0,255,0.3) 1px, transparent 1px),
-                linear-gradient(rgba(0,255,255,0.2) 1px, transparent 1px);
-            background-size: 60px 30px;
-            transform: perspective(500px) rotateX(60deg);
-            transform-origin: center top;
-            opacity: 0.6;
-        }
-
-        /* Scanlines effect */
-        .intro-slide::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                0deg,
-                rgba(0,0,0,0.1) 0px,
-                rgba(0,0,0,0.1) 1px,
-                transparent 1px,
-                transparent 3px
-            );
-            pointer-events: none;
-            z-index: 100;
-        }
-
-        .intro-slide > * {
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Pixel font for retro elements */
-        .pixel-font {
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .intro-logo {
-            margin-bottom: 24px;
-        }
-
-        .intro-logo svg {
-            width: 60px;
-            height: 60px;
-            filter: drop-shadow(0 0 20px rgba(255, 229, 102, 0.8));
-        }
-
-        .intro-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: transparent;
-            padding: 8px 16px;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 11px;
-            color: #00ffff;
-            margin-bottom: 16px;
-            text-shadow: 
-                0 0 10px #00ffff,
-                0 0 20px #00ffff,
-                0 0 30px #00ffff;
-            letter-spacing: 2px;
-            animation: flicker 3s infinite;
-        }
-
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            92% { opacity: 1; }
-            93% { opacity: 0.8; }
-            94% { opacity: 1; }
-            95% { opacity: 0.9; }
-            96% { opacity: 1; }
-        }
-
-        .intro-eyebrow svg {
-            display: none;
-        }
-
-        .intro-title {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 42px;
-            font-weight: 400;
-            color: #39ff14;
-            line-height: 1.3;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-            text-shadow: 
-                0 0 10px #39ff14,
-                0 0 20px #39ff14,
-                0 0 40px #39ff14,
-                4px 4px 0 #006400;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 4px 4px 0 #006400; }
-            to { text-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14, 4px 4px 0 #006400; }
-        }
-
-        .intro-title-sub {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 24px;
-            color: #ffe566;
-            margin-bottom: 20px;
-            text-shadow: 
-                0 0 10px #ffe566,
-                0 0 20px #ffe566,
-                3px 3px 0 #cc9900;
-            letter-spacing: 3px;
-        }
-
-        .intro-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 32px;
-            font-style: italic;
-        }
-
-        .intro-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(180deg, #ffe566 0%, #ffcc00 100%);
-            color: #1a1a1a;
-            padding: 16px 32px;
-            border-radius: 0;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 12px;
-            text-decoration: none;
-            border: 4px solid #cc9900;
-            cursor: pointer;
-            transition: transform 0.1s, box-shadow 0.1s;
-            box-shadow: 
-                0 6px 0 #cc9900,
-                0 0 30px rgba(255, 229, 102, 0.5);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .intro-cta svg {
-            width: 18px;
-            height: 18px;
-            stroke: #1a1a1a;
-            stroke-width: 3;
-        }
-
-        .intro-cta:hover {
-            transform: translateY(2px);
-            box-shadow: 
-                0 4px 0 #cc9900,
-                0 0 40px rgba(255, 229, 102, 0.7);
-        }
-
-        .intro-cta:active {
-            transform: translateY(6px);
-            box-shadow: 
-                0 0 0 #cc9900,
-                0 0 20px rgba(255, 229, 102, 0.5);
-        }
-
-        .intro-hint {
-            position: absolute;
-            bottom: calc(30px + env(safe-area-inset-bottom, 0px));
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Press Start 2P', cursive;
-            color: rgba(255,255,255,0.3);
-            font-size: 8px;
-            letter-spacing: 1px;
-        }
-
-        /* Floating pixel coins animation */
-        .pixel-coins {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        .coin {
-            position: absolute;
-            font-size: 24px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .coin:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .coin:nth-child(2) { right: 15%; top: 25%; animation-delay: 0.5s; }
-        .coin:nth-child(3) { left: 20%; bottom: 35%; animation-delay: 1s; }
-        .coin:nth-child(4) { right: 10%; bottom: 40%; animation-delay: 1.5s; }
-        .coin:nth-child(5) { left: 5%; top: 40%; animation-delay: 0.3s; font-size: 18px; }
-        .coin:nth-child(6) { right: 8%; top: 45%; animation-delay: 0.8s; font-size: 18px; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(10deg); }
-        }
-
-        /* Retro decorations */
-        .retro-decoration {
-            position: absolute;
-            font-size: 32px;
-            opacity: 0.7;
-            z-index: 5;
-        }
-
-        .decoration-left {
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .decoration-right {
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        /* Sound toggle retro style */
-        .sound-toggle-float {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            border: 3px solid rgba(0,255,255,0.5);
-            background: rgba(0,0,0,0.5);
-            color: #00ffff;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 9px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .sound-toggle-float:hover {
-            background: rgba(0,255,255,0.1);
-            border-color: #00ffff;
-            box-shadow: 0 0 20px rgba(0,255,255,0.3);
-        }
-
-        .sound-toggle-float.active {
-            background: rgba(57,255,20,0.2);
-            border-color: #39ff14;
-            color: #39ff14;
-            box-shadow: 0 0 20px rgba(57,255,20,0.3);
-        }
-
-        .sound-toggle-float svg {
-            width: 18px;
-            height: 18px;
-            stroke: currentColor;
-        }
-
-        .sound-toggle-float .hidden {
-            display: none;
-        }
-
-        .sound-toggle-float .sound-label {
-            white-space: nowrap;
-        }
-
-        @keyframes soundPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,255,255,0.4); }
-            50% { transform: scale(1.02); box-shadow: 0 0 20px rgba(0,255,255,0.2); }
-        }
-
-        .sound-toggle-float:not(.active) {
-            animation: soundPulse 2s ease-in-out infinite;
-        }
-
-        /* Hide header and nav on intro */
-        .app:has(.intro-slide.active) .header,
-        .app:has(.intro-slide.active) .bottom-nav {
-            display: none;
-        }
-
-        .app:has(.intro-slide.active) .slides-container {
-            height: 100vh;
-            height: 100dvh;
-        }
-
-        .intro-slide {
-            padding-top: calc(40px + env(safe-area-inset-top, 0px)) !important;
-            padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)) !important;
-        }
-
-        /* Winner styling */
-        .slide[data-rank="1"] .course-card {
-            background: linear-gradient(135deg, #fffbeb, #fef3c7);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-            animation: goldGlow 2s ease-in-out infinite alternate;
-        }
-
-        .slide[data-rank="2"] .course-card {
-            background: linear-gradient(135deg, #fafafa, #f5f5f5);
-            box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
-        }
-
-        .slide[data-rank="3"] .course-card {
-            background: linear-gradient(135deg, #fef7ed, #fef3e2);
-            box-shadow: 0 0 20px rgba(205, 127, 50, 0.2);
-        }
-
-        @keyframes goldGlow {
-            from {
-                box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-            }
-            to {
-                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
-            }
-        }
-
-        /* Card entrance animation */
-        .slide.active .course-card {
-            animation: cardEntrance 0.5s ease-out;
-        }
-
-        .slide.active .rank-display {
-            animation: rankEntrance 0.4s ease-out;
-        }
-
-        @keyframes cardEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(20px) scale(0.98);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        @keyframes rankEntrance {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Number counting animation */
-        .slide.active .rank-number {
-            animation: rankEntrance 0.4s ease-out, countUp 0.6s ease-out;
-        }
-
-        @keyframes countUp {
-            0% { opacity: 0; transform: scale(1.5); }
-            50% { opacity: 1; }
-            100% { transform: scale(1); }
-        }
-
-        /* Trophy animation for top 3 */
-        .slide[data-rank="1"] .rank-number,
-        .slide[data-rank="2"] .rank-number,
-        .slide[data-rank="3"] .rank-number {
-            animation: trophyBounce 0.6s ease-out;
-        }
-
-        @keyframes trophyBounce {
-            0% { transform: scale(0.5); opacity: 0; }
-            50% { transform: scale(1.1); }
-            70% { transform: scale(0.95); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        /* Pulse effect on CTA button */
-        .slide[data-rank="1"] .cta-button {
-            animation: ctaPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes ctaPulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 221, 87, 0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(255, 221, 87, 0); }
-        }
-
-        /* Sparkle effect for top 3 */
-        .slide[data-rank="1"] .rank-display::after,
-        .slide[data-rank="2"] .rank-display::after,
-        .slide[data-rank="3"] .rank-display::after {
-            content: '✨';
-            font-size: 20px;
-            animation: sparkle 1.5s ease-in-out infinite;
-            margin-left: 8px;
-        }
-
-        .slide[data-rank="1"] .rank-display::before {
-            content: '👑';
-            font-size: 20px;
-            animation: crownBounce 2s ease-in-out infinite;
-            margin-right: 8px;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.3; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.1); }
-        }
-
-        @keyframes crownBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-4px); }
-        }
-
-        /* Progress milestone animation */
-        .progress-milestone {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--yellow);
-            color: var(--black);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            opacity: 0;
-            animation: milestonePopup 2s ease-out forwards;
-        }
-
-        @keyframes milestonePopup {
-            0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
-            20% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            80% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-        }
-
-        /* Shake animation for excitement */
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        .slide[data-rank="1"].active .course-card,
-        .slide[data-rank="2"].active .course-card,
-        .slide[data-rank="3"].active .course-card {
-            animation: cardEntrance 0.5s ease-out, shake 0.5s ease-in-out 0.5s;
-        }
-
-        @media (max-height: 700px) {
-            .rank-display { padding: 10px 0; }
-            .rank-number { font-size: 22px; }
-            .course-info { padding: 10px; }
-            .course-title { font-size: 15px; }
-            .course-description { -webkit-line-clamp: 1; }
-            .slide-footer { margin-top: 12px; }
-            
-            .intro-logo { margin-bottom: 16px; }
-            .intro-logo svg { width: 50px; height: 50px; }
-            .intro-eyebrow { font-size: 9px; margin-bottom: 12px; }
-            .intro-title { font-size: 32px; }
-            .intro-title-sub { font-size: 18px; margin-bottom: 16px; }
-            .intro-subtitle { margin-bottom: 24px; font-size: 12px; }
-            .intro-cta { padding: 14px 28px; font-size: 11px; }
-            .sound-toggle-float { margin-top: 16px; font-size: 8px; padding: 10px 16px; }
-            .coin { font-size: 20px; }
-            .retro-decoration { font-size: 24px; }
-        }
-
-        @media (max-height: 600px) {
-            .intro-logo { margin-bottom: 12px; }
-            .intro-logo svg { width: 40px; height: 40px; }
-            .intro-eyebrow { font-size: 8px; margin-bottom: 8px; }
-            .intro-title { font-size: 28px; }
-            .intro-title-sub { font-size: 14px; margin-bottom: 12px; }
-            .intro-subtitle { margin-bottom: 20px; font-size: 11px; }
-            .intro-cta { padding: 12px 24px; font-size: 10px; }
-            .rank-number { font-size: 20px; }
-            .rank-display { padding: 8px 0; }
-            .course-description { display: none; }
-            .sound-toggle-float { margin-top: 12px; padding: 8px 14px; font-size: 7px; }
-            .slide-footer { margin-top: 10px; }
-            .coin { font-size: 16px; }
-            .retro-decoration { display: none; }
-            .intro-hint { font-size: 7px; }
-        }
-
-        @media (max-width: 380px) {
-            .intro-title { font-size: 28px; }
-            .intro-title-sub { font-size: 16px; }
-            .intro-eyebrow { font-size: 8px; }
-            .intro-cta { padding: 12px 24px; font-size: 10px; }
-        }
-
-        .hidden { display: none !important; }
-    </style>
-</head>
-<body>
-    <div class="app">
-        <header class="header">
-            <a href="https://utdannet.no" class="header-logo" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-                    <circle fill="#ffe566" cx="150" cy="150" r="150"></circle>
-                    <path d="M129.1,74.7V167a48.72,48.72,0,0,0,2.8,18.5,17.11,17.11,0,0,0,17.2,10.7,16.54,16.54,0,0,0,17-9.9,52.58,52.58,0,0,0,2.4-19.3V74.7h39.2V167c0,25.7-5.7,37.2-15.3,47.1a57.59,57.59,0,0,1-42.3,16.7A61.54,61.54,0,0,1,106,214.4c-12.7-14-15.3-24.7-15.3-47.3V74.8Z"></path>
-                </svg>
-                <span>Utdannet.no</span>
-            </a>
-            <div class="header-right">
-                <div class="header-badge"><i data-lucide="trophy"></i> Topp 20</div>
-                <button class="sound-toggle" id="soundToggle" onclick="toggleSound()">
-                    <i data-lucide="volume-x" id="soundOff"></i>
-                    <i data-lucide="volume-2" id="soundOn" class="hidden"></i>
-                </button>
-            </div>
-        </header>
-
-        <div class="slides-container" id="slidesContainer">
-            <div class="slide intro-slide active" data-index="0">
-                <!-- Floating pixel coins -->
-                <div class="pixel-coins">
-                    <span class="coin">🪙</span>
-                    <span class="coin">🪙</span>
-                    <span class="coin">🪙</span>
-                    <span class="coin">🪙</span>
-                    <span class="coin">⭐</span>
-                    <span class="coin">⭐</span>
-                </div>
-                
-                <!-- Retro decorations -->
-                <div class="retro-decoration decoration-left">🎮</div>
-                <div class="retro-decoration decoration-right">🕹️</div>
-                
-                <div class="intro-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 300 300">
-                        <circle fill="#ffe566" cx="150" cy="150" r="150"></circle>
-                        <path d="M129.1,74.7V167a48.72,48.72,0,0,0,2.8,18.5,17.11,17.11,0,0,0,17.2,10.7,16.54,16.54,0,0,0,17-9.9,52.58,52.58,0,0,0,2.4-19.3V74.7h39.2V167c0,25.7-5.7,37.2-15.3,47.1a57.59,57.59,0,0,1-42.3,16.7A61.54,61.54,0,0,1,106,214.4c-12.7-14-15.3-24.7-15.3-47.3V74.8Z"></path>
-                    </svg>
-                </div>
-                <div class="intro-eyebrow">★ UTDANNET ★</div>
-                <h1 class="intro-title">TOPP 20</h1>
-                <div class="intro-title-sub">KURS 2025</div>
-                <p class="intro-subtitle">Årets beste utdanninger og kurs – Kåret av Utdannet.</p>
-                <button class="intro-cta" onclick="nextSlide()">START <i data-lucide="play"></i></button>
-                <button class="sound-toggle-float" id="soundToggleFloat" onclick="toggleSound(); event.stopPropagation();">
-                    <i data-lucide="volume-x" class="sound-icon-off"></i>
-                    <i data-lucide="volume-2" class="sound-icon-on hidden"></i>
-                    <span class="sound-label">LYD AV</span>
-                </button>
-                <div class="intro-hint">PRESS START</div>
-            </div>
-        </div>
-
-        <nav class="bottom-nav">
-            <button class="nav-btn" id="prevBtn" onclick="prevSlide()" disabled><i data-lucide="chevron-left"></i></button>
-            <div class="progress-wrapper">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="progress-label" id="progressLabel">Start</div>
-            </div>
-            <button class="nav-btn" id="nextBtn" onclick="nextSlide()"><i data-lucide="chevron-right"></i></button>
-        </nav>
-    </div>
-
-    <script>
-        const courses = [
-            { rank: 20, title: "Innholdsmarkedsføring – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqcrafnu0001xida5pkk0ln5/innholdsmarkedsforing-kurs.png", duration: "2:47", lessons: 38, watchtime: "66t", category: "Digital markedsføring", description: "Lær å engasjere kunder gjennom digitalt innhold og bygg sterke kunderelasjoner.", url: "https://www.utdannet.no/kurs/innholdsmarkedsforing", free: false },
-            { rank: 19, title: "HTML – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8k96l80001hwudr5n4lzql/html-kurs.png", duration: "5:55", lessons: 74, watchtime: "94t", category: "Web og utvikling", description: "Komplett innføring i HTML, CSS og JavaScript for responsive nettsider.", url: "https://www.utdannet.no/kurs/html-kurs", free: false },
-            { rank: 18, title: "Facebook-annonsering – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k50we00blf77y8n01qy4a/facebook-annonsering-kurs.png", duration: "2:20", lessons: 26, watchtime: "104t", category: "Digital annonsering", description: "Mestre Facebook- og Instagram-annonsering med effektive kampanjer.", url: "https://www.utdannet.no/kurs/facebook-annonsering", free: false },
-            { rank: 17, title: "Power BI for nybegynnere", instructor: "Aina Øverås Skott", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clq6mbftu00ipf77yx6x8g7qf/aina-overas-skott-2026.png", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6mg9id00irf77yw7wdijoy/power-bi-grunnleggende.png", duration: "2:40", lessons: 29, watchtime: "108t", category: "Microsoft 365", description: "Analyser og visualiser data i interaktive dashboards med Power BI.", url: "https://www.utdannet.no/kurs/power-bi-for-nybegynnere", free: false },
-            { rank: 16, title: "Regnskap for nybegynnere", instructor: "Beate Holand", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clqc4s5ji00459uwjq4hhc26q/beate-holand.jpg", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqc4w4u000479uwjbv7uep3l/regnskap.png", duration: "2:02", lessons: 27, watchtime: "114t", category: "Business", description: "Forstå regnskap fra grunnen av – perfekt for gründere og små bedrifter.", url: "https://www.utdannet.no/kurs/regnskap-for-nybegynnere", free: false },
-            { rank: 15, title: "Canva – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8kcvxw0003hwudy3gmmxlk/canva-kurs.png", duration: "2:41", lessons: 31, watchtime: "125t", category: "Grafisk design", description: "Design profesjonelle logoer, presentasjoner og sosiale medier-innhold.", url: "https://www.utdannet.no/kurs/canva", free: false },
-            { rank: 14, title: "Kunstig intelligens i arbeidshverdagen", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cm38hcx9h003dxixdmzm3r2wg/kunstig-intelligens-i-arbeidshverdagen.png", duration: "4:10", lessons: 67, watchtime: "129t", category: "AI og teknologi", description: "Bruk AI-verktøy som ChatGPT, Claude og Copilot effektivt i jobben.", url: "https://www.utdannet.no/kurs/kunstig-intelligens-i-arbeidshverdagen", free: false },
-            { rank: 13, title: "Photoshop – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k7gk700bnf77yfklnp2z8/photoshop-kurs.png", duration: "8:28", lessons: 80, watchtime: "134t", category: "Grafisk design", description: "Fra grunnleggende til avansert bildebehandling og kreativ design.", url: "https://www.utdannet.no/kurs/photoshop", free: false },
-            { rank: 12, title: "Outlook – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8kat7o0002hwuddtlqfyq3/outlook-kurs.png", duration: "2:11", lessons: 35, watchtime: "137t", category: "Microsoft 365", description: "Organiser e-post, kalender og oppgaver som en proff.", url: "https://www.utdannet.no/kurs/outlook", free: false },
-            { rank: 11, title: "PowerPoint – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8k7wrn0000hwudatxl60ze/powerpoint-kurs.png", duration: "2:55", lessons: 37, watchtime: "141t", category: "Microsoft 365", description: "Lag imponerende presentasjoner som engasjerer publikum.", url: "https://www.utdannet.no/kurs/powerpoint", free: false },
-            { rank: 10, title: "InDesign – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k8qak00bpf77ybbfue5vu/adobe-indesign-kurs.png", duration: "6:32", lessons: 75, watchtime: "147t", category: "Grafisk design", description: "Design profesjonelle magasiner, brosjyrer og publikasjoner.", url: "https://www.utdannet.no/kurs/indesign", free: false },
-            { rank: 9, title: "Google Ads – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k66qf00bjf77yylbog4em/google-ads-kurs.png", duration: "4:01", lessons: 39, watchtime: "148t", category: "Digital annonsering", description: "Driv målrettet trafikk og leads med Google Ads-kampanjer.", url: "https://www.utdannet.no/kurs/google-ads", free: false },
-            { rank: 8, title: "Word – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8k5pud0001hwudpg3kv21i/word-kurs.png", duration: "3:12", lessons: 49, watchtime: "156t", category: "Microsoft 365", description: "Skriv dokumenter effektivt og lær avanserte Word-funksjoner.", url: "https://www.utdannet.no/kurs/word", free: false },
-            { rank: 7, title: "Illustrator – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k9zy900brf77yx9vxrzcb/adobe-illustrator-kurs.png", duration: "6:21", lessons: 68, watchtime: "185t", category: "Grafisk design", description: "Lag vektorgrafikk, logoer og illustrasjoner fra bunnen av.", url: "https://www.utdannet.no/kurs/illustrator", free: false },
-            { rank: 6, title: "Digital markedsføring – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8ke1ry0004hwudev9yf6pe/digital-markedsforing-kurs.png", duration: "3:40", lessons: 38, watchtime: "191t", category: "Digital markedsføring", description: "Komplett oversikt over digital markedsføring – fra strategi til gjennomføring.", url: "https://www.utdannet.no/kurs/digital-markedsforing", free: false },
-            { rank: 5, title: "SEO – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k3n5i00bhf77y7s0o65wg/seo-kurs.png", duration: "5:14", lessons: 50, watchtime: "192t", category: "Digital markedsføring", description: "Optimaliser nettsider for søkemotorer og øk organisk trafikk.", url: "https://www.utdannet.no/kurs/seo", free: false },
-            { rank: 4, title: "ChatGPT – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6kel6g00btf77y42pqx70n/chatgpt-kurs.png", duration: "3:37", lessons: 43, watchtime: "238t", category: "AI og teknologi", description: "Bruk ChatGPT til å spare tid og jobbe smartere hver dag.", url: "https://www.utdannet.no/kurs/chatgpt", free: false },
-            { rank: 3, title: "Excel – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6jyz0v00bdf77yomqpebyd/excel-kurs.png", duration: "9:40", lessons: 114, watchtime: "270t", category: "Microsoft 365", description: "Mestre Excel fra formler og funksjoner til avansert dataanalyse.", url: "https://www.utdannet.no/kurs/excel", free: false },
-            { rank: 2, title: "Google Analytics 4 – komplett guide", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8kfbdm0005hwudlhih92jx/google-analytics-kurs.png", duration: "4:56", lessons: 53, watchtime: "283t", category: "Analyse", description: "Forstå brukeratferd og optimaliser markedsføringen med GA4.", url: "https://www.utdannet.no/kurs/google-analytics-4", free: false },
-            { rank: 1, title: "Nettsidekurs – bygg din egen nettside", instructor: "Espen Faugstad", instructorImage: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif", image: "https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k1zyb00bff77yhg5atckz/nettsidekurs-wordpress.png", duration: "5:44", lessons: 42, watchtime: "422t", category: "Web og utvikling", description: "Bygg profesjonelle nettsider med WordPress – ingen koding nødvendig.", url: "https://www.utdannet.no/kurs/nettsidekurs-wordpress", free: true }
-        ];
-
-        let currentIndex = 0;
-        const totalSlides = courses.length + 1;
-
-        function createSlides() {
-            const container = document.getElementById('slidesContainer');
-            
-            courses.forEach((course, i) => {
-                const isTop3 = course.rank <= 3;
-                const isTop1 = course.rank === 1;
-                const freeBadge = course.free ? '<span class="badge badge-free">Gratis</span>' : '';
-                
-                const html = `
-                    <div class="slide" data-index="${i + 1}" data-rank="${course.rank}">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Topp 20 Kurs 2025 | Utdannet.no</title>
+		<meta
+			name="description"
+			content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO – oppdag hvilke kurs nordmenn elsker mest."
+		/>
+		<meta name="author" content="Utdannet.no" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://utdannet.github.io/topp20/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://utdannet.github.io/topp20/" />
+		<meta property="og:title" content="Topp 20 Kurs 2025 | Utdannet.no" />
+		<meta
+			property="og:description"
+			content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO – oppdag hvilke kurs nordmenn elsker mest."
+		/>
+		<meta
+			property="og:image"
+			content="https://utdannet.github.io/topp20/retro-image.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content="nb_NO" />
+		<meta property="og:site_name" content="Utdannet.no" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://utdannet.github.io/topp20/" />
+		<meta name="twitter:title" content="Topp 20 Kurs 2025 | Utdannet.no" />
+		<meta
+			name="twitter:description"
+			content="Se de 20 mest populære kursene på Utdannet.no i 2025. Fra Excel og Google Ads til Photoshop og SEO."
+		/>
+		<meta
+			name="twitter:image"
+			content="https://utdannet.github.io/topp20/retro-image.png"
+		/>
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle fill='%23ffe566' cx='50' cy='50' r='50'/><text y='.9em' x='50%' text-anchor='middle' font-size='70'>🏆</text></svg>"
+		/>
+
+		<!-- Theme color for mobile browsers -->
+		<meta name="theme-color" content="#0a0a1a" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+		<style>
+			:root {
+				--yellow: #ffe566;
+				--yellow-dark: #ffdd57;
+				--black: #000000;
+				--white: #ffffff;
+				--bg: #f8f8f8;
+				--card-bg: #f2f2f2;
+				--gray-300: #d4d4d4;
+				--gray-400: #a3a3a3;
+				--gray-500: #737373;
+				--gray-600: #525252;
+				--gray-900: #171717;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			html,
+			body {
+				height: 100%;
+				min-height: 100vh;
+				min-height: 100dvh;
+				overflow: hidden;
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont,
+					'SF Pro Display', sans-serif;
+				font-weight: 400;
+				background: var(--bg);
+				color: var(--gray-900);
+				touch-action: pan-y;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			.app {
+				height: 100%;
+				min-height: 100vh;
+				min-height: 100dvh;
+				display: flex;
+				flex-direction: column;
+				max-width: 500px;
+				margin: 0 auto;
+				background: var(--white);
+				position: relative;
+			}
+
+			/* Header */
+			.header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 12px 20px;
+				padding-top: calc(12px + env(safe-area-inset-top, 0px));
+				background: var(--white);
+				border-bottom: 1px solid var(--card-bg);
+			}
+
+			.header-right {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.header-logo {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				text-decoration: none;
+				color: var(--gray-900);
+			}
+
+			.header-logo:hover span {
+				text-decoration: underline;
+			}
+
+			.header-logo svg {
+				width: 28px;
+				height: 28px;
+			}
+
+			.header-logo span {
+				font-size: 15px;
+				font-weight: 600;
+			}
+
+			.header-badge {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				background: var(--card-bg);
+				padding: 8px 14px;
+				border-radius: 20px;
+				font-size: 13px;
+				font-weight: 500;
+				color: var(--gray-600);
+			}
+
+			.sound-toggle {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border: none;
+				background: var(--card-bg);
+				color: var(--gray-600);
+				cursor: pointer;
+				transition: all 0.2s;
+			}
+
+			.sound-toggle:hover {
+				background: var(--gray-300);
+			}
+
+			.sound-toggle.active {
+				background: var(--yellow);
+				color: var(--black);
+			}
+
+			.sound-toggle svg {
+				width: 20px;
+				height: 20px;
+				stroke: currentColor;
+			}
+
+			.sound-toggle .hidden {
+				display: none;
+			}
+
+			/* Floating sound toggle for intro */
+			.sound-toggle-float {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				padding: 12px 20px;
+				border-radius: 24px;
+				border: 2px solid rgba(255, 255, 255, 0.3);
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				color: var(--white);
+				cursor: pointer;
+				transition: all 0.2s;
+				font-size: 14px;
+				font-weight: 500;
+				margin-top: 24px;
+			}
+
+			.sound-toggle-float:hover {
+				background: rgba(255, 255, 255, 0.2);
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+
+			.sound-toggle-float.active {
+				background: var(--yellow);
+				border-color: var(--yellow);
+				color: var(--black);
+			}
+
+			.sound-toggle-float svg {
+				width: 20px;
+				height: 20px;
+				stroke: currentColor;
+			}
+
+			.sound-toggle-float .hidden {
+				display: none;
+			}
+
+			.sound-toggle-float .sound-label {
+				white-space: nowrap;
+			}
+
+			@keyframes soundPulse {
+				0%,
+				100% {
+					transform: scale(1);
+					box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+				}
+				50% {
+					transform: scale(1.02);
+					box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+				}
+			}
+
+			.sound-toggle-float:not(.active) {
+				animation: soundPulse 2s ease-in-out infinite;
+			}
+
+			.header-badge svg {
+				width: 14px;
+				height: 14px;
+				stroke: #f59e0b;
+			}
+
+			/* Slides container */
+			.slides-container {
+				flex: 1;
+				position: relative;
+				overflow: hidden;
+				background: linear-gradient(to bottom, #e8e8e8 0%, #d0d0d0 100%);
+			}
+
+			.slide {
+				position: absolute;
+				left: 12px;
+				right: 12px;
+				top: 50%;
+				transform: translateY(-50%) translateY(100vh);
+				max-height: calc(100% - 24px);
+				display: flex;
+				flex-direction: column;
+				background: var(--white);
+				padding: 16px 20px 20px 20px;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+				border-radius: 20px;
+				box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15),
+					0 0 0 1px rgba(0, 0, 0, 0.05);
+				opacity: 0;
+				transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+					opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+				z-index: 1;
+			}
+
+			.slide-content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.slide-footer {
+				margin-top: 16px;
+			}
+
+			.slide.active {
+				transform: translateY(-50%);
+				opacity: 1;
+				z-index: 10;
+			}
+
+			/* Stacked cards behind the active one */
+			.slide.stacked-1 {
+				transform: translateY(-50%) translateY(14px) scale(0.96);
+				opacity: 1;
+				z-index: 9;
+				pointer-events: none;
+			}
+
+			.slide.stacked-2 {
+				transform: translateY(-50%) translateY(28px) scale(0.92);
+				opacity: 0.85;
+				z-index: 8;
+				pointer-events: none;
+			}
+
+			.slide.stacked-3 {
+				transform: translateY(-50%) translateY(42px) scale(0.88);
+				opacity: 0.7;
+				z-index: 7;
+				pointer-events: none;
+			}
+
+			/* Card being swiped away (going down) */
+			.slide.swiping-down {
+				transform: translateY(-50%) translateY(120vh) scale(0.9) rotate(3deg);
+				opacity: 0;
+				z-index: 20;
+				transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+					opacity 0.35s ease;
+			}
+
+			/* Cards that have been passed */
+			.slide.passed {
+				transform: translateY(-50%) translateY(100vh);
+				opacity: 0;
+				z-index: 0;
+			}
+
+			/* Rank display - compact */
+			.rank-display {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				padding: 12px 0;
+			}
+
+			.rank-number {
+				font-size: 28px;
+				font-weight: 700;
+				color: var(--gray-900);
+				line-height: 1;
+				letter-spacing: -0.5px;
+			}
+
+			.rank-divider {
+				width: 40px;
+				height: 4px;
+				background: var(--yellow);
+				border-radius: 2px;
+			}
+
+			.rank-number.top3 {
+				background: linear-gradient(135deg, #f59e0b, #d97706);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.rank-number.top3 ~ .rank-divider,
+			.rank-number.top3 + .rank-divider {
+				background: linear-gradient(135deg, #f59e0b, #d97706);
+				width: 50px;
+			}
+
+			.rank-number.top1 {
+				font-size: 32px;
+				font-weight: 700;
+				background: linear-gradient(135deg, #f59e0b, #ea580c);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.rank-number.top1 ~ .rank-divider,
+			.rank-number.top1 + .rank-divider {
+				background: linear-gradient(135deg, #f59e0b, #ea580c);
+				width: 60px;
+				height: 5px;
+			}
+
+			/* Top 3 divider styling */
+			.slide[data-rank='1'] .rank-divider,
+			.slide[data-rank='2'] .rank-divider,
+			.slide[data-rank='3'] .rank-divider {
+				width: 50px;
+			}
+
+			.slide[data-rank='1'] .rank-divider {
+				background: linear-gradient(135deg, #f59e0b, #ea580c);
+				width: 60px;
+				height: 5px;
+			}
+
+			.slide[data-rank='2'] .rank-divider,
+			.slide[data-rank='3'] .rank-divider {
+				background: linear-gradient(135deg, #f59e0b, #d97706);
+			}
+
+			/* Course card */
+			.course-card {
+				background: var(--white);
+				border-radius: 16px;
+				overflow: hidden;
+				border: 1px solid var(--gray-300);
+			}
+
+			.course-image-wrapper {
+				position: relative;
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
+			}
+
+			.course-image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.image-overlay {
+				position: absolute;
+				top: 12px;
+				left: 12px;
+				display: flex;
+				gap: 8px;
+			}
+
+			.image-overlay-bottom {
+				position: absolute;
+				bottom: 12px;
+				right: 12px;
+			}
+
+			.instructor-overlay {
+				position: absolute;
+				bottom: 12px;
+				left: 12px;
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				background: rgba(0, 0, 0, 0.7);
+				padding: 6px 12px 6px 6px;
+				border-radius: 20px;
+				backdrop-filter: blur(8px);
+				-webkit-backdrop-filter: blur(8px);
+			}
+
+			.instructor-overlay .instructor-avatar {
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 2px solid rgba(255, 255, 255, 0.3);
+			}
+
+			.instructor-overlay .instructor-name {
+				font-size: 13px;
+				font-weight: 500;
+				color: var(--white);
+			}
+
+			.badge {
+				padding: 6px 10px;
+				border-radius: 8px;
+				font-size: 12px;
+				font-weight: 600;
+			}
+
+			.badge-free {
+				background: #22c55e;
+				color: white;
+			}
+
+			.badge-duration {
+				background: rgba(0, 0, 0, 0.7);
+				color: white;
+				backdrop-filter: blur(8px);
+				-webkit-backdrop-filter: blur(8px);
+			}
+
+			.course-info {
+				padding: 12px 14px;
+			}
+
+			.course-title {
+				font-size: 17px;
+				font-weight: 600;
+				line-height: 1.3;
+				color: var(--gray-900);
+				margin-bottom: 6px;
+			}
+
+			.course-title a {
+				color: inherit;
+				text-decoration: none;
+				transition: text-decoration 0.15s;
+			}
+
+			.course-title a:hover {
+				text-decoration: underline;
+			}
+
+			/* Description */
+			.course-description {
+				font-size: 13px;
+				line-height: 1.45;
+				font-weight: 400;
+				color: var(--gray-500);
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+			/* CTA Button */
+			.cta-button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+				width: 100%;
+				padding: 14px;
+				background: var(--yellow);
+				color: var(--black);
+				text-decoration: none;
+				text-align: center;
+				font-weight: 500;
+				font-size: 15px;
+				border-radius: 12px;
+				transition: transform 0.15s, opacity 0.15s;
+			}
+
+			.cta-button svg {
+				width: 16px;
+				height: 16px;
+				stroke: var(--black);
+				stroke-width: 2.5;
+			}
+
+			.cta-button:active {
+				transform: scale(0.98);
+				opacity: 0.9;
+			}
+
+			/* Bottom nav */
+			.bottom-nav {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 12px 20px;
+				padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+				background: var(--white);
+				border-top: 1px solid var(--card-bg);
+				gap: 16px;
+			}
+
+			.nav-btn {
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				background: var(--card-bg);
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition: all 0.15s;
+				color: var(--black);
+			}
+
+			.nav-btn:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+				color: var(--gray-400);
+			}
+
+			.nav-btn:not(:disabled):active {
+				transform: scale(0.95);
+			}
+
+			.nav-btn svg {
+				width: 24px;
+				height: 24px;
+				stroke: currentColor;
+				stroke-width: 2;
+			}
+
+			.progress-wrapper {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+			}
+
+			.progress-bar {
+				height: 8px;
+				background: var(--gray-300);
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.progress-fill {
+				height: 100%;
+				background: var(--yellow-dark);
+				border-radius: 4px;
+				transition: width 0.35s ease;
+				width: 0%;
+			}
+
+			.progress-label {
+				text-align: center;
+				font-size: 13px;
+				font-weight: 500;
+				color: var(--gray-600);
+			}
+
+			/* Intro slide */
+			.intro-slide {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 40px 20px !important;
+				background: linear-gradient(
+					180deg,
+					#0a0a2e 0%,
+					#1a1a4e 50%,
+					#0f0f3d 100%
+				) !important;
+				position: absolute;
+				left: 0 !important;
+				right: 0 !important;
+				top: 0 !important;
+				bottom: 0 !important;
+				max-height: none !important;
+				min-height: 100vh;
+				min-height: 100dvh;
+				height: 100vh;
+				height: 100dvh;
+				border-radius: 0 !important;
+				box-shadow: none !important;
+				transform: translateY(100vh) !important;
+				overflow: hidden;
+			}
+
+			.intro-slide.active {
+				transform: translateY(0) !important;
+			}
+
+			.intro-slide.passed {
+				transform: translateY(100vh) !important;
+			}
+
+			/* Retro grid floor */
+			.intro-slide::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: -50%;
+				right: -50%;
+				height: 45%;
+				background: linear-gradient(
+						90deg,
+						rgba(255, 0, 255, 0.3) 1px,
+						transparent 1px
+					),
+					linear-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+				background-size: 60px 30px;
+				transform: perspective(500px) rotateX(60deg);
+				transform-origin: center top;
+				opacity: 0.6;
+			}
+
+			/* Scanlines effect */
+			.intro-slide::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: repeating-linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.1) 0px,
+					rgba(0, 0, 0, 0.1) 1px,
+					transparent 1px,
+					transparent 3px
+				);
+				pointer-events: none;
+				z-index: 100;
+			}
+
+			.intro-slide > * {
+				position: relative;
+				z-index: 10;
+			}
+
+			/* Pixel font for retro elements */
+			.pixel-font {
+				font-family: 'Press Start 2P', cursive;
+			}
+
+			.intro-logo {
+				margin-bottom: 24px;
+			}
+
+			.intro-logo svg {
+				width: 60px;
+				height: 60px;
+				filter: drop-shadow(0 0 20px rgba(255, 229, 102, 0.8));
+			}
+
+			.intro-eyebrow {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				background: transparent;
+				padding: 8px 16px;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 11px;
+				color: #00ffff;
+				margin-bottom: 16px;
+				text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+				letter-spacing: 2px;
+				animation: flicker 3s infinite;
+			}
+
+			@keyframes flicker {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				92% {
+					opacity: 1;
+				}
+				93% {
+					opacity: 0.8;
+				}
+				94% {
+					opacity: 1;
+				}
+				95% {
+					opacity: 0.9;
+				}
+				96% {
+					opacity: 1;
+				}
+			}
+
+			.intro-eyebrow svg {
+				display: none;
+			}
+
+			.intro-title {
+				font-family: 'Press Start 2P', cursive;
+				font-size: 42px;
+				font-weight: 400;
+				color: #39ff14;
+				line-height: 1.3;
+				letter-spacing: 2px;
+				margin-bottom: 12px;
+				text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14,
+					4px 4px 0 #006400;
+				animation: glow 2s ease-in-out infinite alternate;
+			}
+
+			@keyframes glow {
+				from {
+					text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14,
+						4px 4px 0 #006400;
+				}
+				to {
+					text-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 60px #39ff14,
+						4px 4px 0 #006400;
+				}
+			}
+
+			.intro-title-sub {
+				font-family: 'Press Start 2P', cursive;
+				font-size: 24px;
+				color: #ffe566;
+				margin-bottom: 20px;
+				text-shadow: 0 0 10px #ffe566, 0 0 20px #ffe566, 3px 3px 0 #cc9900;
+				letter-spacing: 3px;
+			}
+
+			.intro-subtitle {
+				font-family: 'Inter', sans-serif;
+				font-size: 14px;
+				font-weight: 400;
+				color: rgba(255, 255, 255, 0.7);
+				margin-bottom: 32px;
+				font-style: italic;
+			}
+
+			.intro-cta {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				background: linear-gradient(180deg, #ffe566 0%, #ffcc00 100%);
+				color: #1a1a1a;
+				padding: 16px 32px;
+				border-radius: 0;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 12px;
+				text-decoration: none;
+				border: 4px solid #cc9900;
+				cursor: pointer;
+				transition: transform 0.1s, box-shadow 0.1s;
+				box-shadow: 0 6px 0 #cc9900, 0 0 30px rgba(255, 229, 102, 0.5);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.intro-cta svg {
+				width: 18px;
+				height: 18px;
+				stroke: #1a1a1a;
+				stroke-width: 3;
+			}
+
+			.intro-cta:hover {
+				transform: translateY(2px);
+				box-shadow: 0 4px 0 #cc9900, 0 0 40px rgba(255, 229, 102, 0.7);
+			}
+
+			.intro-cta:active {
+				transform: translateY(6px);
+				box-shadow: 0 0 0 #cc9900, 0 0 20px rgba(255, 229, 102, 0.5);
+			}
+
+			.intro-hint {
+				position: absolute;
+				bottom: calc(30px + env(safe-area-inset-bottom, 0px));
+				left: 50%;
+				transform: translateX(-50%);
+				font-family: 'Press Start 2P', cursive;
+				color: rgba(255, 255, 255, 0.3);
+				font-size: 8px;
+				letter-spacing: 1px;
+			}
+
+			/* Floating pixel coins animation */
+			.pixel-coins {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 5;
+			}
+
+			.coin {
+				position: absolute;
+				font-size: 24px;
+				animation: float 3s ease-in-out infinite;
+			}
+
+			.coin:nth-child(1) {
+				left: 10%;
+				top: 20%;
+				animation-delay: 0s;
+			}
+			.coin:nth-child(2) {
+				right: 15%;
+				top: 25%;
+				animation-delay: 0.5s;
+			}
+			.coin:nth-child(3) {
+				left: 20%;
+				bottom: 35%;
+				animation-delay: 1s;
+			}
+			.coin:nth-child(4) {
+				right: 10%;
+				bottom: 40%;
+				animation-delay: 1.5s;
+			}
+			.coin:nth-child(5) {
+				left: 5%;
+				top: 40%;
+				animation-delay: 0.3s;
+				font-size: 18px;
+			}
+			.coin:nth-child(6) {
+				right: 8%;
+				top: 45%;
+				animation-delay: 0.8s;
+				font-size: 18px;
+			}
+
+			@keyframes float {
+				0%,
+				100% {
+					transform: translateY(0) rotate(0deg);
+				}
+				50% {
+					transform: translateY(-15px) rotate(10deg);
+				}
+			}
+
+			/* Retro decorations */
+			.retro-decoration {
+				position: absolute;
+				font-size: 32px;
+				opacity: 0.7;
+				z-index: 5;
+			}
+
+			.decoration-left {
+				left: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.decoration-right {
+				right: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			/* Sound toggle retro style */
+			.sound-toggle-float {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 12px 20px;
+				border: 3px solid rgba(0, 255, 255, 0.5);
+				background: rgba(0, 0, 0, 0.5);
+				color: #00ffff;
+				cursor: pointer;
+				transition: all 0.2s;
+				font-family: 'Press Start 2P', cursive;
+				font-size: 9px;
+				margin-top: 20px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.sound-toggle-float:hover {
+				background: rgba(0, 255, 255, 0.1);
+				border-color: #00ffff;
+				box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+			}
+
+			.sound-toggle-float.active {
+				background: rgba(57, 255, 20, 0.2);
+				border-color: #39ff14;
+				color: #39ff14;
+				box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+			}
+
+			.sound-toggle-float svg {
+				width: 18px;
+				height: 18px;
+				stroke: currentColor;
+			}
+
+			.sound-toggle-float .hidden {
+				display: none;
+			}
+
+			.sound-toggle-float .sound-label {
+				white-space: nowrap;
+			}
+
+			@keyframes soundPulse {
+				0%,
+				100% {
+					transform: scale(1);
+					box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
+				}
+				50% {
+					transform: scale(1.02);
+					box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+				}
+			}
+
+			.sound-toggle-float:not(.active) {
+				animation: soundPulse 2s ease-in-out infinite;
+			}
+
+			/* Hide header and nav on intro */
+			.app:has(.intro-slide.active) .header,
+			.app:has(.intro-slide.active) .bottom-nav {
+				display: none;
+			}
+
+			.app:has(.intro-slide.active) .slides-container {
+				height: 100vh;
+				height: 100dvh;
+			}
+
+			.intro-slide {
+				padding-top: calc(40px + env(safe-area-inset-top, 0px)) !important;
+				padding-bottom: calc(
+					40px + env(safe-area-inset-bottom, 0px)
+				) !important;
+			}
+
+			/* Winner styling */
+			.slide[data-rank='1'] .course-card {
+				background: linear-gradient(135deg, #fffbeb, #fef3c7);
+				box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+				animation: goldGlow 2s ease-in-out infinite alternate;
+			}
+
+			.slide[data-rank='2'] .course-card {
+				background: linear-gradient(135deg, #fafafa, #f5f5f5);
+				box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+			}
+
+			.slide[data-rank='3'] .course-card {
+				background: linear-gradient(135deg, #fef7ed, #fef3e2);
+				box-shadow: 0 0 20px rgba(205, 127, 50, 0.2);
+			}
+
+			@keyframes goldGlow {
+				from {
+					box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+				}
+				to {
+					box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+				}
+			}
+
+			/* Card entrance animation */
+			.slide.active .course-card {
+				animation: cardEntrance 0.5s ease-out;
+			}
+
+			.slide.active .rank-display {
+				animation: rankEntrance 0.4s ease-out;
+			}
+
+			@keyframes cardEntrance {
+				from {
+					opacity: 0;
+					transform: translateY(20px) scale(0.98);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0) scale(1);
+				}
+			}
+
+			@keyframes rankEntrance {
+				from {
+					opacity: 0;
+					transform: translateY(-10px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* Number counting animation */
+			.slide.active .rank-number {
+				animation: rankEntrance 0.4s ease-out, countUp 0.6s ease-out;
+			}
+
+			@keyframes countUp {
+				0% {
+					opacity: 0;
+					transform: scale(1.5);
+				}
+				50% {
+					opacity: 1;
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+
+			/* Trophy animation for top 3 */
+			.slide[data-rank='1'] .rank-number,
+			.slide[data-rank='2'] .rank-number,
+			.slide[data-rank='3'] .rank-number {
+				animation: trophyBounce 0.6s ease-out;
+			}
+
+			@keyframes trophyBounce {
+				0% {
+					transform: scale(0.5);
+					opacity: 0;
+				}
+				50% {
+					transform: scale(1.1);
+				}
+				70% {
+					transform: scale(0.95);
+				}
+				100% {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+
+			/* Pulse effect on CTA button */
+			.slide[data-rank='1'] .cta-button {
+				animation: ctaPulse 2s ease-in-out infinite;
+			}
+
+			@keyframes ctaPulse {
+				0%,
+				100% {
+					box-shadow: 0 0 0 0 rgba(255, 221, 87, 0.4);
+				}
+				50% {
+					box-shadow: 0 0 0 10px rgba(255, 221, 87, 0);
+				}
+			}
+
+			/* Sparkle effect for top 3 */
+			.slide[data-rank='1'] .rank-display::after,
+			.slide[data-rank='2'] .rank-display::after,
+			.slide[data-rank='3'] .rank-display::after {
+				content: '✨';
+				font-size: 20px;
+				animation: sparkle 1.5s ease-in-out infinite;
+				margin-left: 8px;
+			}
+
+			.slide[data-rank='1'] .rank-display::before {
+				content: '👑';
+				font-size: 20px;
+				animation: crownBounce 2s ease-in-out infinite;
+				margin-right: 8px;
+			}
+
+			@keyframes sparkle {
+				0%,
+				100% {
+					opacity: 0.3;
+					transform: scale(0.8);
+				}
+				50% {
+					opacity: 1;
+					transform: scale(1.1);
+				}
+			}
+
+			@keyframes crownBounce {
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-4px);
+				}
+			}
+
+			/* Progress milestone animation */
+			.progress-milestone {
+				position: absolute;
+				top: -30px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: var(--yellow);
+				color: var(--black);
+				padding: 4px 12px;
+				border-radius: 12px;
+				font-size: 12px;
+				font-weight: 600;
+				opacity: 0;
+				animation: milestonePopup 2s ease-out forwards;
+			}
+
+			@keyframes milestonePopup {
+				0% {
+					opacity: 0;
+					transform: translateX(-50%) translateY(10px);
+				}
+				20% {
+					opacity: 1;
+					transform: translateX(-50%) translateY(0);
+				}
+				80% {
+					opacity: 1;
+					transform: translateX(-50%) translateY(0);
+				}
+				100% {
+					opacity: 0;
+					transform: translateX(-50%) translateY(-10px);
+				}
+			}
+
+			/* Shake animation for excitement */
+			@keyframes shake {
+				0%,
+				100% {
+					transform: translateX(0);
+				}
+				25% {
+					transform: translateX(-5px);
+				}
+				75% {
+					transform: translateX(5px);
+				}
+			}
+
+			.slide[data-rank='1'].active .course-card,
+			.slide[data-rank='2'].active .course-card,
+			.slide[data-rank='3'].active .course-card {
+				animation: cardEntrance 0.5s ease-out, shake 0.5s ease-in-out 0.5s;
+			}
+
+			@media (max-height: 700px) {
+				.rank-display {
+					padding: 10px 0;
+				}
+				.rank-number {
+					font-size: 22px;
+				}
+				.course-info {
+					padding: 10px;
+				}
+				.course-title {
+					font-size: 15px;
+				}
+				.course-description {
+					-webkit-line-clamp: 1;
+				}
+				.slide-footer {
+					margin-top: 12px;
+				}
+
+				.intro-logo {
+					margin-bottom: 16px;
+				}
+				.intro-logo svg {
+					width: 50px;
+					height: 50px;
+				}
+				.intro-eyebrow {
+					font-size: 9px;
+					margin-bottom: 12px;
+				}
+				.intro-title {
+					font-size: 32px;
+				}
+				.intro-title-sub {
+					font-size: 18px;
+					margin-bottom: 16px;
+				}
+				.intro-subtitle {
+					margin-bottom: 24px;
+					font-size: 12px;
+				}
+				.intro-cta {
+					padding: 14px 28px;
+					font-size: 11px;
+				}
+				.sound-toggle-float {
+					margin-top: 16px;
+					font-size: 8px;
+					padding: 10px 16px;
+				}
+				.coin {
+					font-size: 20px;
+				}
+				.retro-decoration {
+					font-size: 24px;
+				}
+			}
+
+			@media (max-height: 600px) {
+				.intro-logo {
+					margin-bottom: 12px;
+				}
+				.intro-logo svg {
+					width: 40px;
+					height: 40px;
+				}
+				.intro-eyebrow {
+					font-size: 8px;
+					margin-bottom: 8px;
+				}
+				.intro-title {
+					font-size: 28px;
+				}
+				.intro-title-sub {
+					font-size: 14px;
+					margin-bottom: 12px;
+				}
+				.intro-subtitle {
+					margin-bottom: 20px;
+					font-size: 11px;
+				}
+				.intro-cta {
+					padding: 12px 24px;
+					font-size: 10px;
+				}
+				.rank-number {
+					font-size: 20px;
+				}
+				.rank-display {
+					padding: 8px 0;
+				}
+				.course-description {
+					display: none;
+				}
+				.sound-toggle-float {
+					margin-top: 12px;
+					padding: 8px 14px;
+					font-size: 7px;
+				}
+				.slide-footer {
+					margin-top: 10px;
+				}
+				.coin {
+					font-size: 16px;
+				}
+				.retro-decoration {
+					display: none;
+				}
+				.intro-hint {
+					font-size: 7px;
+				}
+			}
+
+			@media (max-width: 380px) {
+				.intro-title {
+					font-size: 28px;
+				}
+				.intro-title-sub {
+					font-size: 16px;
+				}
+				.intro-eyebrow {
+					font-size: 8px;
+				}
+				.intro-cta {
+					padding: 12px 24px;
+					font-size: 10px;
+				}
+			}
+
+			.hidden {
+				display: none !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<header class="header">
+				<a href="https://utdannet.no" class="header-logo" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+						<circle fill="#ffe566" cx="150" cy="150" r="150"></circle>
+						<path
+							d="M129.1,74.7V167a48.72,48.72,0,0,0,2.8,18.5,17.11,17.11,0,0,0,17.2,10.7,16.54,16.54,0,0,0,17-9.9,52.58,52.58,0,0,0,2.4-19.3V74.7h39.2V167c0,25.7-5.7,37.2-15.3,47.1a57.59,57.59,0,0,1-42.3,16.7A61.54,61.54,0,0,1,106,214.4c-12.7-14-15.3-24.7-15.3-47.3V74.8Z"
+						></path>
+					</svg>
+					<span>Utdannet.no</span>
+				</a>
+				<div class="header-right">
+					<div class="header-badge"><i data-lucide="trophy"></i> Topp 20</div>
+					<button class="sound-toggle" id="soundToggle" onclick="toggleSound()">
+						<i data-lucide="volume-x" id="soundOff"></i>
+						<i data-lucide="volume-2" id="soundOn" class="hidden"></i>
+					</button>
+				</div>
+			</header>
+
+			<div class="slides-container" id="slidesContainer">
+				<div class="slide intro-slide active" data-index="0">
+					<!-- Floating pixel coins -->
+					<div class="pixel-coins">
+						<span class="coin">🪙</span>
+						<span class="coin">🪙</span>
+						<span class="coin">🪙</span>
+						<span class="coin">🪙</span>
+						<span class="coin">⭐</span>
+						<span class="coin">⭐</span>
+					</div>
+
+					<!-- Retro decorations -->
+					<div class="retro-decoration decoration-left">🎮</div>
+					<div class="retro-decoration decoration-right">🕹️</div>
+
+					<div class="intro-logo">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="60"
+							height="60"
+							viewBox="0 0 300 300"
+						>
+							<circle fill="#ffe566" cx="150" cy="150" r="150"></circle>
+							<path
+								d="M129.1,74.7V167a48.72,48.72,0,0,0,2.8,18.5,17.11,17.11,0,0,0,17.2,10.7,16.54,16.54,0,0,0,17-9.9,52.58,52.58,0,0,0,2.4-19.3V74.7h39.2V167c0,25.7-5.7,37.2-15.3,47.1a57.59,57.59,0,0,1-42.3,16.7A61.54,61.54,0,0,1,106,214.4c-12.7-14-15.3-24.7-15.3-47.3V74.8Z"
+							></path>
+						</svg>
+					</div>
+					<div class="intro-eyebrow">★ UTDANNET ★</div>
+					<h1 class="intro-title">TOPP 20</h1>
+					<div class="intro-title-sub">KURS 2025</div>
+					<p class="intro-subtitle">
+						Årets beste utdanninger og kurs – Kåret av Utdannet.
+					</p>
+					<button class="intro-cta" onclick="nextSlide()">
+						START <i data-lucide="play"></i>
+					</button>
+					<button
+						class="sound-toggle-float"
+						id="soundToggleFloat"
+						onclick="toggleSound(); event.stopPropagation();"
+					>
+						<i data-lucide="volume-x" class="sound-icon-off"></i>
+						<i data-lucide="volume-2" class="sound-icon-on hidden"></i>
+						<span class="sound-label">LYD AV</span>
+					</button>
+					<div class="intro-hint">PRESS START</div>
+				</div>
+			</div>
+
+			<nav class="bottom-nav">
+				<button class="nav-btn" id="prevBtn" onclick="prevSlide()" disabled>
+					<i data-lucide="chevron-left"></i>
+				</button>
+				<div class="progress-wrapper">
+					<div class="progress-bar">
+						<div class="progress-fill" id="progressFill"></div>
+					</div>
+					<div class="progress-label" id="progressLabel">Start</div>
+				</div>
+				<button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+					<i data-lucide="chevron-right"></i>
+				</button>
+			</nav>
+		</div>
+
+		<script>
+			const courses = [
+				{
+					rank: 20,
+					title: 'Innholdsmarkedsføring – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqcrafnu0001xida5pkk0ln5/innholdsmarkedsforing-kurs.png',
+					duration: '2:47',
+					lessons: 38,
+					watchtime: '66t',
+					category: 'Digital markedsføring',
+					description:
+						'Lær å engasjere kunder gjennom digitalt innhold og bygg sterke kunderelasjoner.',
+					url: 'https://www.utdannet.no/kurs/innholdsmarkedsforing',
+					free: false,
+				},
+				{
+					rank: 19,
+					title: 'HTML – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq8k96l80001hwudr5n4lzql/html-kurs.png',
+					duration: '5:55',
+					lessons: 74,
+					watchtime: '94t',
+					category: 'Web og utvikling',
+					description:
+						'Komplett innføring i HTML, CSS og JavaScript for responsive nettsider.',
+					url: 'https://www.utdannet.no/kurs/html-kurs',
+					free: false,
+				},
+				{
+					rank: 18,
+					title: 'Facebook-annonsering – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6k50we00blf77y8n01qy4a/facebook-annonsering-kurs.png',
+					duration: '2:20',
+					lessons: 26,
+					watchtime: '104t',
+					category: 'Digital annonsering',
+					description:
+						'Mestre Facebook- og Instagram-annonsering med effektive kampanjer.',
+					url: 'https://www.utdannet.no/kurs/facebook-annonsering',
+					free: false,
+				},
+				{
+					rank: 17,
+					title: 'Power BI for nybegynnere',
+					instructor: 'Aina Øverås Skott',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clq6mbftu00ipf77yx6x8g7qf/aina-overas-skott-2026.png',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq6mg9id00irf77yw7wdijoy/power-bi-grunnleggende.png',
+					duration: '2:40',
+					lessons: 29,
+					watchtime: '108t',
+					category: 'Microsoft 365',
+					description:
+						'Analyser og visualiser data i interaktive dashboards med Power BI.',
+					url: 'https://www.utdannet.no/kurs/power-bi-for-nybegynnere',
+					free: false,
+				},
+				{
+					rank: 16,
+					title: 'Regnskap for nybegynnere',
+					instructor: 'Beate Holand',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clqc4s5ji00459uwjq4hhc26q/beate-holand.jpg',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqc4w4u000479uwjbv7uep3l/regnskap.png',
+					duration: '2:02',
+					lessons: 27,
+					watchtime: '114t',
+					category: 'Business',
+					description:
+						'Forstå regnskap fra grunnen av – perfekt for gründere og små bedrifter.',
+					url: 'https://www.utdannet.no/kurs/regnskap-for-nybegynnere',
+					free: false,
+				},
+				{
+					rank: 15,
+					title: 'ChatGPT for nybegynnere',
+					instructor: 'Marcus Moberg',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/cmbug7c680004z5gezdly4hfu/marcus-moberg-kursholder-utdannet.jpg',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cmbulaj5l000180zd29qsty0m/chatgpt-grunnkurs.png',
+					duration: '2:39',
+					lessons: 25,
+					watchtime: '124t',
+					category: 'Kunstig intelligens',
+					description:
+						'Praktisk innføring i ChatGPT med prompting-teknikker for jobb og privat.',
+					url: 'https://www.utdannet.no/kurs/chatgpt-grunnleggende',
+					free: false,
+				},
+				{
+					rank: 14,
+					title: 'Fotografering – bli en bedre fotograf',
+					instructor: 'Olav Erik Storm',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clqdkl2qa00002imzi1ffl20w/olav-erik-storm-kursholder.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqdkml9s00022imzajycaby7/fotokurs-olav-storm.png',
+					duration: '5:52',
+					lessons: 128,
+					watchtime: '124t',
+					category: 'Foto og design',
+					description:
+						'Lær eksponering, komposisjon og kreative teknikker fra profesjonell fotograf.',
+					url: 'https://www.utdannet.no/kurs/fotografering-bli-en-bedre-fotograf',
+					free: false,
+				},
+				{
+					rank: 13,
+					title: 'Microsoft Excel for viderekomne',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqdja7kl000jpr5s3t5zj0z4/excel-kurs.png',
+					duration: '2:17',
+					lessons: 40,
+					watchtime: '125t',
+					category: 'Microsoft 365',
+					description:
+						'Mestre pivottabeller, FINN.RAD og avanserte funksjoner i Excel.',
+					url: 'https://www.utdannet.no/kurs/microsoft-excel-for-viderekomne',
+					free: false,
+				},
+				{
+					rank: 12,
+					title: 'Canva – godt og stilrent innhold',
+					instructor: 'Tonje Hellevig',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/cm2k0pggt0000v15wm0wyje69/tonje-hellevig.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cm41byguz0001qzo77taduiwe/canva-kurs.png',
+					duration: '1:59',
+					lessons: 36,
+					watchtime: '126t',
+					category: 'Grafisk design',
+					description:
+						'Lag profesjonelt design uten designbakgrunn – maler, animasjoner og KI.',
+					url: 'https://www.utdannet.no/kurs/canva-stilrent-innhold',
+					free: false,
+				},
+				{
+					rank: 11,
+					title: 'Python for nybegynnere',
+					instructor: 'Magnus Øye',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clqao4yqr000e17ups5ylp4kl/magnus-oye.jpg',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqapadyv001ty5lo21xum1h9/python-grunnkurs.png',
+					duration: '8:12',
+					lessons: 83,
+					watchtime: '133t',
+					category: 'Programmering',
+					description:
+						'Lær programmering fra bunnen med variabler, løkker og praktiske prosjekter.',
+					url: 'https://www.utdannet.no/kurs/python',
+					free: false,
+				},
+				{
+					rank: 10,
+					title: 'Adobe Illustrator – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq728zcq001x10qgh0oxu1n7/illustrator-komplett.png',
+					duration: '7:59',
+					lessons: 83,
+					watchtime: '149t',
+					category: 'Grafisk design',
+					description:
+						'Mestre vektorgrafikk og lag logoer, ikoner og illustrasjoner som en proff.',
+					url: 'https://www.utdannet.no/kurs/adobe-illustrator',
+					free: false,
+				},
+				{
+					rank: 9,
+					title: 'Adobe Premiere Pro – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clq57uxvw00013hn6si6o1ne1/adobe-premiere-pro-v12.png',
+					duration: '6:05',
+					lessons: 60,
+					watchtime: '151t',
+					category: 'Videoredigering',
+					description:
+						'Bli profesjonell videoredigerer med klipping, fargekorrigering og eksport.',
+					url: 'https://www.utdannet.no/kurs/adobe-premiere-pro',
+					free: false,
+				},
+				{
+					rank: 8,
+					title: 'WordPress – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqc62v7500018ahqphlg11b3/wordpress-kurs-utgave-2026.png',
+					duration: '4:46',
+					lessons: 46,
+					watchtime: '177t',
+					category: 'Web-plattformer',
+					description:
+						'Bygg din egen nettside med ny 2026-utgave, SEO og sikkerhet inkludert.',
+					url: 'https://www.utdannet.no/kurs/wordpress',
+					free: false,
+				},
+				{
+					rank: 7,
+					title: 'Adobe InDesign – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqb96gww0001v8ir5pilpx65/adobe-indesign-komplett-2024.png',
+					duration: '5:53',
+					lessons: 69,
+					watchtime: '191t',
+					category: 'Grafisk design',
+					description:
+						'Lag profesjonelle trykksaker, bøker, magasiner og digitale dokumenter.',
+					url: 'https://www.utdannet.no/kurs/adobe-indesign',
+					free: false,
+				},
+				{
+					rank: 6,
+					title: 'Adobe Photoshop – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqayaxoj000nxlebfaimer9u/adobe-photoshop.png',
+					duration: '8:57',
+					lessons: 119,
+					watchtime: '211t',
+					category: 'Bilderedigering',
+					description:
+						'119 leksjoner med retusjering, lag, masker og avansert fotomanipulering.',
+					url: 'https://www.utdannet.no/kurs/adobe-photoshop',
+					free: false,
+				},
+				{
+					rank: 5,
+					title: 'Microsoft Excel for nybegynnere',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/clqdk29m90047h4qiyl2mtfd7/excel-kurs.png',
+					duration: '2:18',
+					lessons: 52,
+					watchtime: '229t',
+					category: 'Microsoft 365',
+					description:
+						'Lær Excel fra bunnen – formler, diagrammer og alt du trenger i hverdagen.',
+					url: 'https://www.utdannet.no/kurs/microsoft-excel-for-nybegynnere',
+					free: false,
+				},
+				{
+					rank: 4,
+					title: 'Gratiskurs i digital markedsføring',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cm5xpzosg0001wdva3i3tmyzl/digital-markedsforing-gratis-kurs.png',
+					duration: '2:22',
+					lessons: 27,
+					watchtime: '232t',
+					category: 'Digital markedsføring',
+					description:
+						'Start gratis! Google Analytics, Google Ads og Facebook-annonsering.',
+					url: 'https://www.utdannet.no/kurs/gratiskurs-digital-markedsforing',
+					free: true,
+				},
+				{
+					rank: 3,
+					title: 'Generativ KI – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cmb5cwsan00038rtszvsdes1q/kurs-chatgpt-kunstig-intelligens.png',
+					duration: '6:33',
+					lessons: 32,
+					watchtime: '240t',
+					category: 'Kunstig intelligens',
+					description:
+						'Forstå språkmodeller, prompting, dataanalyse og lag din egen GPT.',
+					url: 'https://www.utdannet.no/kurs/generativ-kunstig-intelligens',
+					free: false,
+				},
+				{
+					rank: 2,
+					title: 'Google Ads – komplett guide',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cm3r6gpep000359ava8s1yfpg/google-ads-kurs.png',
+					duration: '6:08',
+					lessons: 48,
+					watchtime: '254t',
+					category: 'Digital annonsering',
+					description:
+						'Norges mest omfattende Google Ads-kurs med AI-verktøy og hemmeligheter.',
+					url: 'https://www.utdannet.no/kurs/google-ads',
+					free: false,
+				},
+				{
+					rank: 1,
+					title: 'Søkemotoroptimalisering (SEO)',
+					instructor: 'Espen Faugstad',
+					instructorImage:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/avatars/clo1ezpyu0000xamw59vasqb9/espen-faugstad.jfif',
+					image:
+						'https://utdannet-2024.s3.eu-north-1.amazonaws.com/courses/cm2eop9kh00012ddtnp90hzli/kurs-sokemotoroptimalisering-seo.png',
+					duration: '8:54',
+					lessons: 56,
+					watchtime: '270t',
+					category: 'SEO og analyse',
+					description:
+						'Ranger til toppen av Google med komplett SEO-guide for bærekraftig vekst.',
+					url: 'https://www.utdannet.no/kurs/sokemotoroptimalisering-seo',
+					free: false,
+				},
+			];
+
+			let currentIndex = 0;
+			const totalSlides = courses.length + 1;
+
+			function createSlides() {
+				const container = document.getElementById('slidesContainer');
+
+				courses.forEach((course, i) => {
+					const isTop3 = course.rank <= 3;
+					const isTop1 = course.rank === 1;
+					const freeBadge = course.free
+						? '<span class="badge badge-free">Gratis</span>'
+						: '';
+
+					const html = `
+                    <div class="slide" data-index="${i + 1}" data-rank="${
+						course.rank
+					}">
                         <div class="slide-content">
                             <div class="rank-display">
                                 <div class="rank-divider"></div>
-                                <div class="rank-number ${isTop1 ? 'top1' : isTop3 ? 'top3' : ''}">Topp ${course.rank}</div>
+                                <div class="rank-number ${
+																	isTop1 ? 'top1' : isTop3 ? 'top3' : ''
+																}">Topp ${course.rank}</div>
                                 <div class="rank-divider"></div>
                             </div>
                             
                             <div class="course-card">
                                 <div class="course-image-wrapper">
-                                    <img class="course-image" src="${course.image}" alt="${course.title}" loading="lazy">
+                                    <img class="course-image" src="${
+																			course.image
+																		}" alt="${course.title}" loading="lazy">
                                     <div class="image-overlay">
                                         ${freeBadge}
                                     </div>
                                     <div class="image-overlay-bottom">
-                                        <span class="badge badge-duration">${course.duration}</span>
+                                        <span class="badge badge-duration">${
+																					course.duration
+																				}</span>
                                     </div>
                                     <div class="instructor-overlay">
-                                        <img class="instructor-avatar" src="${course.instructorImage}" alt="${course.instructor}">
-                                        <span class="instructor-name">${course.instructor}</span>
+                                        <img class="instructor-avatar" src="${
+																					course.instructorImage
+																				}" alt="${course.instructor}">
+                                        <span class="instructor-name">${
+																					course.instructor
+																				}</span>
                                     </div>
                                 </div>
                                 <div class="course-info">
-                                    <h2 class="course-title"><a href="${course.url}" target="_blank">${course.title}</a></h2>
-                                    <p class="course-description">${course.description}</p>
+                                    <h2 class="course-title"><a href="${
+																			course.url
+																		}" target="_blank">${course.title}</a></h2>
+                                    <p class="course-description">${
+																			course.description
+																		}</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide-footer">
-                            <a href="${course.url}" class="cta-button" target="_blank">Se kurset <i data-lucide="external-link"></i></a>
+                            <a href="${
+															course.url
+														}" class="cta-button" target="_blank">Se kurset <i data-lucide="external-link"></i></a>
                         </div>
                     </div>
                 `;
-                container.insertAdjacentHTML('beforeend', html);
-            });
-        }
+					container.insertAdjacentHTML('beforeend', html);
+				});
+			}
 
-        function updateUI() {
-            const progressFill = document.getElementById('progressFill');
-            const progressLabel = document.getElementById('progressLabel');
-            const progressWrapper = document.querySelector('.progress-wrapper');
-            
-            if (currentIndex === 0) {
-                progressLabel.textContent = 'Start';
-                progressFill.style.width = '0%';
-            } else {
-                progressLabel.textContent = `${currentIndex} av 20`;
-                progressFill.style.width = `${(currentIndex / courses.length) * 100}%`;
-                
-                // Milestone celebrations
-                const milestones = {
-                    5: '🔥 25% unnagjort!',
-                    10: '🚀 Halvveis!',
-                    15: '⭐ 75% - Nesten der!',
-                    18: '🏆 Topp 3 snart!'
-                };
-                
-                if (milestones[currentIndex]) {
-                    showMilestone(milestones[currentIndex], progressWrapper);
-                    
-                    // Small confetti burst at milestones
-                    if (currentIndex === 10) {
-                        confetti({
-                            particleCount: 30,
-                            spread: 50,
-                            origin: { y: 0.8 },
-                            colors: ['#ffe566', '#ffdd57', '#ffd700']
-                        });
-                    }
-                }
-            }
+			function updateUI() {
+				const progressFill = document.getElementById('progressFill');
+				const progressLabel = document.getElementById('progressLabel');
+				const progressWrapper = document.querySelector('.progress-wrapper');
 
-            document.getElementById('prevBtn').disabled = currentIndex === 0;
-            document.getElementById('nextBtn').disabled = currentIndex === totalSlides - 1;
-        }
+				if (currentIndex === 0) {
+					progressLabel.textContent = 'Start';
+					progressFill.style.width = '0%';
+				} else {
+					progressLabel.textContent = `${currentIndex} av 20`;
+					progressFill.style.width = `${
+						(currentIndex / courses.length) * 100
+					}%`;
 
-        function showMilestone(text, container) {
-            const existing = container.querySelector('.progress-milestone');
-            if (existing) existing.remove();
-            
-            const milestone = document.createElement('div');
-            milestone.className = 'progress-milestone';
-            milestone.textContent = text;
-            container.style.position = 'relative';
-            container.appendChild(milestone);
-            
-            setTimeout(() => milestone.remove(), 2000);
-        }
+					// Milestone celebrations
+					const milestones = {
+						5: '🔥 25% unnagjort!',
+						10: '🚀 Halvveis!',
+						15: '⭐ 75% - Nesten der!',
+						18: '🏆 Topp 3 snart!',
+					};
 
-        function goToSlide(newIndex) {
-            if (newIndex < 0 || newIndex >= totalSlides) return;
-            
-            const direction = newIndex > currentIndex ? 1 : -1;
-            const oldIndex = currentIndex;
-            const currentRank = newIndex > 0 ? 21 - newIndex : 0;
-            
-            // Check for streak (only forward)
-            if (direction > 0 && newIndex > 0) {
-                checkStreak();
-            }
-            
-            // Play different sounds based on position
-            if (direction > 0 && currentRank <= 5 && currentRank > 0) {
-                // Drumroll for top 5
-                playDrumroll(currentRank <= 3 ? 800 : 400);
-            }
-            
-            // Play swipe sound
-            playSwipeSound(direction);
-            
-            // Reveal sound for each new slide
-            if (direction > 0 && newIndex > 0) {
-                setTimeout(() => playRevealSound(), 150);
-            }
-            
-            // Haptic feedback
-            if (navigator.vibrate) navigator.vibrate(currentRank <= 3 ? [20, 50, 20] : 10);
-            
-            const slides = document.querySelectorAll('.slide');
-            
-            // Card stack animation
-            if (direction > 0 && oldIndex >= 0) {
-                // Going forward - swipe current card down
-                const currentSlide = slides[oldIndex];
-                if (currentSlide) {
-                    currentSlide.classList.add('swiping-down');
-                    setTimeout(() => {
-                        currentSlide.classList.remove('swiping-down');
-                        currentSlide.classList.add('passed');
-                    }, 500);
-                }
-            }
-            
-            // Update all slides
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active', 'stacked-1', 'stacked-2', 'stacked-3');
-                
-                if (direction < 0 && i === oldIndex) {
-                    // Going back - remove passed state
-                    slide.classList.remove('passed', 'swiping-down');
-                }
-                
-                if (i === newIndex) {
-                    slide.classList.remove('passed');
-                    slide.classList.add('active');
-                } else if (i === newIndex + 1 && i < totalSlides) {
-                    slide.classList.add('stacked-1');
-                } else if (i === newIndex + 2 && i < totalSlides) {
-                    slide.classList.add('stacked-2');
-                } else if (i === newIndex + 3 && i < totalSlides) {
-                    slide.classList.add('stacked-3');
-                }
-            });
-            
-            currentIndex = newIndex;
-            updateUI();
-            lucide.createIcons();
-            
-            // Check for top 3 and trigger confetti
-            if (newIndex > 0 && oldIndex !== newIndex) {
-                if (currentRank <= 3) {
-                    setTimeout(() => triggerConfetti(currentRank), 400);
-                }
-            }
-        }
+					if (milestones[currentIndex]) {
+						showMilestone(milestones[currentIndex], progressWrapper);
 
-        function nextSlide() { goToSlide(currentIndex + 1); }
-        function prevSlide() { goToSlide(currentIndex - 1); }
+						// Small confetti burst at milestones
+						if (currentIndex === 10) {
+							confetti({
+								particleCount: 30,
+								spread: 50,
+								origin: { y: 0.8 },
+								colors: ['#ffe566', '#ffdd57', '#ffd700'],
+							});
+						}
+					}
+				}
 
-        // Touch - supports both horizontal and vertical swipes
-        let touchStartX = 0;
-        let touchStartY = 0;
-        document.addEventListener('touchstart', e => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-        document.addEventListener('touchend', e => {
-            const diffX = touchStartX - e.changedTouches[0].clientX;
-            const diffY = touchStartY - e.changedTouches[0].clientY;
-            
-            // Use the larger movement direction
-            if (Math.abs(diffX) > Math.abs(diffY)) {
-                // Horizontal swipe
-                if (Math.abs(diffX) > 50) diffX > 0 ? nextSlide() : prevSlide();
-            } else {
-                // Vertical swipe - swipe up = next (cards fall down)
-                if (Math.abs(diffY) > 50) diffY > 0 ? nextSlide() : prevSlide();
-            }
-        }, { passive: true });
+				document.getElementById('prevBtn').disabled = currentIndex === 0;
+				document.getElementById('nextBtn').disabled =
+					currentIndex === totalSlides - 1;
+			}
 
-        // Keyboard - add up/down arrows
-        document.addEventListener('keydown', e => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === ' ') nextSlide();
-            if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') prevSlide();
-        });
+			function showMilestone(text, container) {
+				const existing = container.querySelector('.progress-milestone');
+				if (existing) existing.remove();
 
-        createSlides();
-        updateUI();
-        lucide.createIcons();
+				const milestone = document.createElement('div');
+				milestone.className = 'progress-milestone';
+				milestone.textContent = text;
+				container.style.position = 'relative';
+				container.appendChild(milestone);
 
-        // Initialize card stack
-        function initCardStack() {
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active', 'stacked-1', 'stacked-2', 'stacked-3', 'passed');
-                if (i === 0) {
-                    slide.classList.add('active');
-                } else if (i === 1) {
-                    slide.classList.add('stacked-1');
-                } else if (i === 2) {
-                    slide.classList.add('stacked-2');
-                } else if (i === 3) {
-                    slide.classList.add('stacked-3');
-                }
-            });
-        }
-        initCardStack();
+				setTimeout(() => milestone.remove(), 2000);
+			}
 
-        // Audio context for sound effects
-        let audioCtx = null;
-        let suspensePlaying = false;
-        let soundEnabled = false;
-        let bgMusic = null;
-        
-        function initAudio() {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-            
-            // Initialize background music
-            if (!bgMusic) {
-                bgMusic = new Audio('retro-arcade-game-music.mp3');
-                bgMusic.loop = true;
-                bgMusic.volume = 0.4;
-            }
-        }
+			function goToSlide(newIndex) {
+				if (newIndex < 0 || newIndex >= totalSlides) return;
 
-        function toggleSound() {
-            initAudio();
-            soundEnabled = !soundEnabled;
-            
-            // Update header toggle
-            const headerToggle = document.getElementById('soundToggle');
-            if (headerToggle) {
-                headerToggle.classList.toggle('active', soundEnabled);
-                const offIcon = headerToggle.querySelector('#soundOff');
-                const onIcon = headerToggle.querySelector('#soundOn');
-                if (offIcon) offIcon.classList.toggle('hidden', soundEnabled);
-                if (onIcon) onIcon.classList.toggle('hidden', !soundEnabled);
-            }
+				const direction = newIndex > currentIndex ? 1 : -1;
+				const oldIndex = currentIndex;
+				const currentRank = newIndex > 0 ? 21 - newIndex : 0;
 
-            // Update float toggle
-            const floatToggle = document.getElementById('soundToggleFloat');
-            if (floatToggle) {
-                floatToggle.classList.toggle('active', soundEnabled);
-                const offIcon = floatToggle.querySelector('.sound-icon-off');
-                const onIcon = floatToggle.querySelector('.sound-icon-on');
-                if (offIcon) offIcon.classList.toggle('hidden', soundEnabled);
-                if (onIcon) onIcon.classList.toggle('hidden', !soundEnabled);
-                
-                const label = floatToggle.querySelector('.sound-label');
-                if (label) {
-                    label.textContent = soundEnabled ? 'LYD PÅ' : 'LYD AV';
-                }
-            }
+				// Check for streak (only forward)
+				if (direction > 0 && newIndex > 0) {
+					checkStreak();
+				}
 
-            // Start or stop music
-            if (soundEnabled) {
-                playSuspenseMusic();
-            } else {
-                stopSuspenseMusic();
-            }
-            
-            lucide.createIcons();
-        }
+				// Play different sounds based on position
+				if (direction > 0 && currentRank <= 5 && currentRank > 0) {
+					// Drumroll for top 5
+					playDrumroll(currentRank <= 3 ? 800 : 400);
+				}
 
-        // Background music - external audio file
-        function playSuspenseMusic() {
-            if (!soundEnabled || suspensePlaying) return;
-            initAudio();
-            
-            if (bgMusic) {
-                bgMusic.currentTime = 0;
-                bgMusic.play().catch(e => console.log('Audio play failed:', e));
-                suspensePlaying = true;
-            }
-        }
+				// Play swipe sound
+				playSwipeSound(direction);
 
-        function stopSuspenseMusic() {
-            suspensePlaying = false;
-            if (bgMusic) {
-                bgMusic.pause();
-            }
-        }
+				// Reveal sound for each new slide
+				if (direction > 0 && newIndex > 0) {
+					setTimeout(() => playRevealSound(), 150);
+				}
 
-        // Drumroll for top 3
-        function playDrumroll(duration = 1000) {
-            if (!audioCtx || !soundEnabled) return;
-            
-            const startTime = audioCtx.currentTime;
-            const hits = 20;
-            
-            for (let i = 0; i < hits; i++) {
-                const time = startTime + (i * duration / 1000 / hits);
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-                
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-                
-                osc.type = 'triangle';
-                osc.frequency.value = 200 + Math.random() * 100;
-                
-                const volume = 0.1 + (i / hits) * 0.15;
-                gain.gain.setValueAtTime(volume, time);
-                gain.gain.exponentialRampToValueAtTime(0.01, time + 0.05);
-                
-                osc.start(time);
-                osc.stop(time + 0.05);
-            }
-        }
+				// Haptic feedback
+				if (navigator.vibrate)
+					navigator.vibrate(currentRank <= 3 ? [20, 50, 20] : 10);
 
-        // Reveal sound
-        function playRevealSound() {
-            if (!audioCtx || !soundEnabled) return;
-            
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-            
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(400, audioCtx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.15);
-            
-            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
-            
-            osc.start();
-            osc.stop(audioCtx.currentTime + 0.15);
-        }
+				const slides = document.querySelectorAll('.slide');
 
-        function playSwipeSound(direction) {
-            if (!audioCtx || !soundEnabled) return;
-            
-            const oscillator = audioCtx.createOscillator();
-            const gainNode = audioCtx.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(direction > 0 ? 600 : 500, audioCtx.currentTime);
-            oscillator.frequency.exponentialRampToValueAtTime(direction > 0 ? 800 : 400, audioCtx.currentTime + 0.1);
-            
-            gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-            
-            oscillator.start(audioCtx.currentTime);
-            oscillator.stop(audioCtx.currentTime + 0.1);
-        }
+				// Card stack animation
+				if (direction > 0 && oldIndex >= 0) {
+					// Going forward - swipe current card down
+					const currentSlide = slides[oldIndex];
+					if (currentSlide) {
+						currentSlide.classList.add('swiping-down');
+						setTimeout(() => {
+							currentSlide.classList.remove('swiping-down');
+							currentSlide.classList.add('passed');
+						}, 500);
+					}
+				}
 
-        function playSuccessSound() {
-            if (!audioCtx || !soundEnabled) return;
-            
-            // Stop background music for victory
-            stopSuspenseMusic();
-            
-            const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
-            notes.forEach((freq, i) => {
-                const oscillator = audioCtx.createOscillator();
-                const gainNode = audioCtx.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-                
-                oscillator.type = 'sine';
-                oscillator.frequency.value = freq;
-                
-                gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime + i * 0.15);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + i * 0.15 + 0.5);
-                
-                oscillator.start(audioCtx.currentTime + i * 0.15);
-                oscillator.stop(audioCtx.currentTime + i * 0.15 + 0.5);
-            });
-        }
+				// Update all slides
+				slides.forEach((slide, i) => {
+					slide.classList.remove(
+						'active',
+						'stacked-1',
+						'stacked-2',
+						'stacked-3'
+					);
 
-        function triggerConfetti(rank) {
-            if (rank === 3) {
-                // Bronze - subtle confetti
-                confetti({
-                    particleCount: 50,
-                    spread: 60,
-                    origin: { y: 0.7 },
-                    colors: ['#cd7f32', '#b87333', '#da9100']
-                });
-            } else if (rank === 2) {
-                // Silver - medium confetti
-                confetti({
-                    particleCount: 80,
-                    spread: 80,
-                    origin: { y: 0.6 },
-                    colors: ['#c0c0c0', '#d3d3d3', '#a8a8a8', '#e8e8e8']
-                });
-            } else if (rank === 1) {
-                // Gold - big celebration!
-                playSuccessSound();
-                
-                // First burst
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 }
-                });
-                
-                // Side cannons
-                setTimeout(() => {
-                    confetti({
-                        particleCount: 50,
-                        angle: 60,
-                        spread: 55,
-                        origin: { x: 0 },
-                        colors: ['#ffd700', '#ffec8b', '#ffa500', '#ff8c00']
-                    });
-                    confetti({
-                        particleCount: 50,
-                        angle: 120,
-                        spread: 55,
-                        origin: { x: 1 },
-                        colors: ['#ffd700', '#ffec8b', '#ffa500', '#ff8c00']
-                    });
-                }, 200);
-                
-                // Continuous gold rain
-                setTimeout(() => {
-                    confetti({
-                        particleCount: 30,
-                        spread: 100,
-                        origin: { y: 0 },
-                        colors: ['#ffd700', '#ffec8b', '#ffe566'],
-                        ticks: 300
-                    });
-                }, 500);
-            }
-        }
+					if (direction < 0 && i === oldIndex) {
+						// Going back - remove passed state
+						slide.classList.remove('passed', 'swiping-down');
+					}
 
-        // Streak counter for fast navigation
-        let lastSwipeTime = 0;
-        let streakCount = 0;
+					if (i === newIndex) {
+						slide.classList.remove('passed');
+						slide.classList.add('active');
+					} else if (i === newIndex + 1 && i < totalSlides) {
+						slide.classList.add('stacked-1');
+					} else if (i === newIndex + 2 && i < totalSlides) {
+						slide.classList.add('stacked-2');
+					} else if (i === newIndex + 3 && i < totalSlides) {
+						slide.classList.add('stacked-3');
+					}
+				});
 
-        function checkStreak() {
-            const now = Date.now();
-            if (now - lastSwipeTime < 1500) {
-                streakCount++;
-                if (streakCount >= 3) {
-                    showStreakMessage(streakCount);
-                }
-            } else {
-                streakCount = 1;
-            }
-            lastSwipeTime = now;
-        }
+				currentIndex = newIndex;
+				updateUI();
+				lucide.createIcons();
 
-        function showStreakMessage(count) {
-            const messages = {
-                3: '🔥 3 på rad!',
-                5: '⚡ 5 på rad!',
-                7: '🚀 7 på rad!',
-                10: '💥 10 på rad! USTOPPELIG!'
-            };
-            
-            const msg = messages[count];
-            if (!msg) return;
-            
-            const streak = document.createElement('div');
-            streak.style.cssText = `
+				// Check for top 3 and trigger confetti
+				if (newIndex > 0 && oldIndex !== newIndex) {
+					if (currentRank <= 3) {
+						setTimeout(() => triggerConfetti(currentRank), 400);
+					}
+				}
+			}
+
+			function nextSlide() {
+				goToSlide(currentIndex + 1);
+			}
+			function prevSlide() {
+				goToSlide(currentIndex - 1);
+			}
+
+			// Touch - supports both horizontal and vertical swipes
+			let touchStartX = 0;
+			let touchStartY = 0;
+			document.addEventListener(
+				'touchstart',
+				(e) => {
+					touchStartX = e.touches[0].clientX;
+					touchStartY = e.touches[0].clientY;
+				},
+				{ passive: true }
+			);
+			document.addEventListener(
+				'touchend',
+				(e) => {
+					const diffX = touchStartX - e.changedTouches[0].clientX;
+					const diffY = touchStartY - e.changedTouches[0].clientY;
+
+					// Use the larger movement direction
+					if (Math.abs(diffX) > Math.abs(diffY)) {
+						// Horizontal swipe
+						if (Math.abs(diffX) > 50) diffX > 0 ? nextSlide() : prevSlide();
+					} else {
+						// Vertical swipe - swipe up = next (cards fall down)
+						if (Math.abs(diffY) > 50) diffY > 0 ? nextSlide() : prevSlide();
+					}
+				},
+				{ passive: true }
+			);
+
+			// Keyboard - add up/down arrows
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === ' ')
+					nextSlide();
+				if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') prevSlide();
+			});
+
+			createSlides();
+			updateUI();
+			lucide.createIcons();
+
+			// Initialize card stack
+			function initCardStack() {
+				const slides = document.querySelectorAll('.slide');
+				slides.forEach((slide, i) => {
+					slide.classList.remove(
+						'active',
+						'stacked-1',
+						'stacked-2',
+						'stacked-3',
+						'passed'
+					);
+					if (i === 0) {
+						slide.classList.add('active');
+					} else if (i === 1) {
+						slide.classList.add('stacked-1');
+					} else if (i === 2) {
+						slide.classList.add('stacked-2');
+					} else if (i === 3) {
+						slide.classList.add('stacked-3');
+					}
+				});
+			}
+			initCardStack();
+
+			// Audio context for sound effects
+			let audioCtx = null;
+			let suspensePlaying = false;
+			let soundEnabled = false;
+			let bgMusic = null;
+
+			function initAudio() {
+				if (!audioCtx) {
+					audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+				}
+				if (audioCtx.state === 'suspended') {
+					audioCtx.resume();
+				}
+
+				// Initialize background music
+				if (!bgMusic) {
+					bgMusic = new Audio('retro-arcade-game-music.mp3');
+					bgMusic.loop = true;
+					bgMusic.volume = 0.4;
+				}
+			}
+
+			function toggleSound() {
+				initAudio();
+				soundEnabled = !soundEnabled;
+
+				// Update header toggle
+				const headerToggle = document.getElementById('soundToggle');
+				if (headerToggle) {
+					headerToggle.classList.toggle('active', soundEnabled);
+					const offIcon = headerToggle.querySelector('#soundOff');
+					const onIcon = headerToggle.querySelector('#soundOn');
+					if (offIcon) offIcon.classList.toggle('hidden', soundEnabled);
+					if (onIcon) onIcon.classList.toggle('hidden', !soundEnabled);
+				}
+
+				// Update float toggle
+				const floatToggle = document.getElementById('soundToggleFloat');
+				if (floatToggle) {
+					floatToggle.classList.toggle('active', soundEnabled);
+					const offIcon = floatToggle.querySelector('.sound-icon-off');
+					const onIcon = floatToggle.querySelector('.sound-icon-on');
+					if (offIcon) offIcon.classList.toggle('hidden', soundEnabled);
+					if (onIcon) onIcon.classList.toggle('hidden', !soundEnabled);
+
+					const label = floatToggle.querySelector('.sound-label');
+					if (label) {
+						label.textContent = soundEnabled ? 'LYD PÅ' : 'LYD AV';
+					}
+				}
+
+				// Start or stop music
+				if (soundEnabled) {
+					playSuspenseMusic();
+				} else {
+					stopSuspenseMusic();
+				}
+
+				lucide.createIcons();
+			}
+
+			// Background music - external audio file
+			function playSuspenseMusic() {
+				if (!soundEnabled || suspensePlaying) return;
+				initAudio();
+
+				if (bgMusic) {
+					bgMusic.currentTime = 0;
+					bgMusic.play().catch((e) => console.log('Audio play failed:', e));
+					suspensePlaying = true;
+				}
+			}
+
+			function stopSuspenseMusic() {
+				suspensePlaying = false;
+				if (bgMusic) {
+					bgMusic.pause();
+				}
+			}
+
+			// Drumroll for top 3
+			function playDrumroll(duration = 1000) {
+				if (!audioCtx || !soundEnabled) return;
+
+				const startTime = audioCtx.currentTime;
+				const hits = 20;
+
+				for (let i = 0; i < hits; i++) {
+					const time = startTime + (i * duration) / 1000 / hits;
+					const osc = audioCtx.createOscillator();
+					const gain = audioCtx.createGain();
+
+					osc.connect(gain);
+					gain.connect(audioCtx.destination);
+
+					osc.type = 'triangle';
+					osc.frequency.value = 200 + Math.random() * 100;
+
+					const volume = 0.1 + (i / hits) * 0.15;
+					gain.gain.setValueAtTime(volume, time);
+					gain.gain.exponentialRampToValueAtTime(0.01, time + 0.05);
+
+					osc.start(time);
+					osc.stop(time + 0.05);
+				}
+			}
+
+			// Reveal sound
+			function playRevealSound() {
+				if (!audioCtx || !soundEnabled) return;
+
+				const osc = audioCtx.createOscillator();
+				const gain = audioCtx.createGain();
+				osc.connect(gain);
+				gain.connect(audioCtx.destination);
+
+				osc.type = 'sine';
+				osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+				osc.frequency.exponentialRampToValueAtTime(
+					800,
+					audioCtx.currentTime + 0.15
+				);
+
+				gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+				gain.gain.exponentialRampToValueAtTime(
+					0.01,
+					audioCtx.currentTime + 0.15
+				);
+
+				osc.start();
+				osc.stop(audioCtx.currentTime + 0.15);
+			}
+
+			function playSwipeSound(direction) {
+				if (!audioCtx || !soundEnabled) return;
+
+				const oscillator = audioCtx.createOscillator();
+				const gainNode = audioCtx.createGain();
+
+				oscillator.connect(gainNode);
+				gainNode.connect(audioCtx.destination);
+
+				oscillator.type = 'sine';
+				oscillator.frequency.setValueAtTime(
+					direction > 0 ? 600 : 500,
+					audioCtx.currentTime
+				);
+				oscillator.frequency.exponentialRampToValueAtTime(
+					direction > 0 ? 800 : 400,
+					audioCtx.currentTime + 0.1
+				);
+
+				gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+				gainNode.gain.exponentialRampToValueAtTime(
+					0.01,
+					audioCtx.currentTime + 0.1
+				);
+
+				oscillator.start(audioCtx.currentTime);
+				oscillator.stop(audioCtx.currentTime + 0.1);
+			}
+
+			function playSuccessSound() {
+				if (!audioCtx || !soundEnabled) return;
+
+				// Stop background music for victory
+				stopSuspenseMusic();
+
+				const notes = [523.25, 659.25, 783.99, 1046.5]; // C5, E5, G5, C6
+				notes.forEach((freq, i) => {
+					const oscillator = audioCtx.createOscillator();
+					const gainNode = audioCtx.createGain();
+
+					oscillator.connect(gainNode);
+					gainNode.connect(audioCtx.destination);
+
+					oscillator.type = 'sine';
+					oscillator.frequency.value = freq;
+
+					gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime + i * 0.15);
+					gainNode.gain.exponentialRampToValueAtTime(
+						0.01,
+						audioCtx.currentTime + i * 0.15 + 0.5
+					);
+
+					oscillator.start(audioCtx.currentTime + i * 0.15);
+					oscillator.stop(audioCtx.currentTime + i * 0.15 + 0.5);
+				});
+			}
+
+			function triggerConfetti(rank) {
+				if (rank === 3) {
+					// Bronze - subtle confetti
+					confetti({
+						particleCount: 50,
+						spread: 60,
+						origin: { y: 0.7 },
+						colors: ['#cd7f32', '#b87333', '#da9100'],
+					});
+				} else if (rank === 2) {
+					// Silver - medium confetti
+					confetti({
+						particleCount: 80,
+						spread: 80,
+						origin: { y: 0.6 },
+						colors: ['#c0c0c0', '#d3d3d3', '#a8a8a8', '#e8e8e8'],
+					});
+				} else if (rank === 1) {
+					// Gold - big celebration!
+					playSuccessSound();
+
+					// First burst
+					confetti({
+						particleCount: 100,
+						spread: 70,
+						origin: { y: 0.6 },
+					});
+
+					// Side cannons
+					setTimeout(() => {
+						confetti({
+							particleCount: 50,
+							angle: 60,
+							spread: 55,
+							origin: { x: 0 },
+							colors: ['#ffd700', '#ffec8b', '#ffa500', '#ff8c00'],
+						});
+						confetti({
+							particleCount: 50,
+							angle: 120,
+							spread: 55,
+							origin: { x: 1 },
+							colors: ['#ffd700', '#ffec8b', '#ffa500', '#ff8c00'],
+						});
+					}, 200);
+
+					// Continuous gold rain
+					setTimeout(() => {
+						confetti({
+							particleCount: 30,
+							spread: 100,
+							origin: { y: 0 },
+							colors: ['#ffd700', '#ffec8b', '#ffe566'],
+							ticks: 300,
+						});
+					}, 500);
+				}
+			}
+
+			// Streak counter for fast navigation
+			let lastSwipeTime = 0;
+			let streakCount = 0;
+
+			function checkStreak() {
+				const now = Date.now();
+				if (now - lastSwipeTime < 1500) {
+					streakCount++;
+					if (streakCount >= 3) {
+						showStreakMessage(streakCount);
+					}
+				} else {
+					streakCount = 1;
+				}
+				lastSwipeTime = now;
+			}
+
+			function showStreakMessage(count) {
+				const messages = {
+					3: '🔥 3 på rad!',
+					5: '⚡ 5 på rad!',
+					7: '🚀 7 på rad!',
+					10: '💥 10 på rad! USTOPPELIG!',
+				};
+
+				const msg = messages[count];
+				if (!msg) return;
+
+				const streak = document.createElement('div');
+				streak.style.cssText = `
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -1727,24 +2364,24 @@
                 z-index: 1000;
                 animation: streakPop 1s ease-out forwards;
             `;
-            streak.textContent = msg;
-            document.body.appendChild(streak);
-            
-            setTimeout(() => streak.remove(), 1000);
-            
-            // Extra confetti for big streaks
-            if (count >= 5) {
-                confetti({
-                    particleCount: 20,
-                    spread: 40,
-                    origin: { y: 0.5 }
-                });
-            }
-        }
+				streak.textContent = msg;
+				document.body.appendChild(streak);
 
-        // Add streak animation to styles
-        const streakStyle = document.createElement('style');
-        streakStyle.textContent = `
+				setTimeout(() => streak.remove(), 1000);
+
+				// Extra confetti for big streaks
+				if (count >= 5) {
+					confetti({
+						particleCount: 20,
+						spread: 40,
+						origin: { y: 0.5 },
+					});
+				}
+			}
+
+			// Add streak animation to styles
+			const streakStyle = document.createElement('style');
+			streakStyle.textContent = `
             @keyframes streakPop {
                 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
                 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
@@ -1752,7 +2389,7 @@
                 100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
             }
         `;
-        document.head.appendChild(streakStyle);
-    </script>
-</body>
+			document.head.appendChild(streakStyle);
+		</script>
+	</body>
 </html>
