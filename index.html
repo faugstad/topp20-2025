@@ -2436,7 +2436,7 @@
 				if (!bgMusic) {
 					bgMusic = new Audio('retro-arcade-game-music.mp3');
 					bgMusic.loop = true;
-					bgMusic.volume = 0.4;
+					bgMusic.volume = 0.2;
 				}
 			}
 
@@ -2590,7 +2590,7 @@
 					audioCtx.currentTime + 0.1
 				);
 
-				gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+				gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
 				gainNode.gain.exponentialRampToValueAtTime(
 					0.01,
 					audioCtx.currentTime + 0.1
@@ -2617,7 +2617,7 @@
 					oscillator.type = 'sine';
 					oscillator.frequency.value = freq;
 
-					gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime + i * 0.15);
+					gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime + i * 0.15);
 					gainNode.gain.exponentialRampToValueAtTime(
 						0.01,
 						audioCtx.currentTime + i * 0.15 + 0.5
